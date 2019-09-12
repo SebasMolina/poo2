@@ -3,7 +3,7 @@ _ _ _
 
 # Sistema Gestión de Envíos y Pedidos
 # Nyan
-![Nyan Cat](http://www.nyan.cat/cats/original.gif)
+![Nyan Cat](original.gif)
 
 ## Grupo: Click para descargar mas RAM.
 
@@ -13,12 +13,14 @@ _ _ _
 
 ## Visión 
 
-Que todas las personas tanto clientes como empresas puedan publicar y pedir productos
+Que todas las personas tanto clientes como empresas puedan publicar y pedir productos.
+Desarrollaremos una aplicación donde se pueden registrar tanto usuarios, como también empresas proveedoras de productos. Ambos deben poner una dirección donde se buscará los productos (si es una empresa) o donde se enviarán los productos (si es un cliente). La aplicación, a su vez, permite a las empresas mostrar sus catálogos de productos y los clientes pueden elegir y armar su orden.
+Ademas de eso proveer al cliente recomendaciones y ofertas correspondientes en su búsqueda, teniendo en cuenta sus elecciones y preferencias.
 
 ## Lista de características
 
-1. Logeo con cuentas de google o faceboook
-2. El manejo de comidas a travez de categorias
+1. Logeo con cuentas de google o faceboook.
+2. El manejo de comidas a traves de categorias.
 3. La posibilidad de que cada cliente arme sus propios productos.
 4. El sistema tiene la cualidad de recomendarle comida en base a sus busquedas.
 5. En base a la informacion del usuario proveerle descuentos y beneficios.
@@ -29,9 +31,6 @@ Que todas las personas tanto clientes como empresas puedan publicar y pedir prod
 La aplicacion se desarrollara para plataforma web, la primera version saldra para web, pero teniendo en cuenta el futuro desarrollo de una aplicacion. El uso de la pagina estara destinado para mayores de 16 años (ya que se pueden realizar pagos en ella). El sistema manejara ubicaciones para mostras las posibilidades de servicios de la zona. 
 
 ## Bocetos de Interfaz de Usuario
-
-
-![alt text](https://github.com/cbiale/POO2/blob/master/iteraci%C3%B3n_1/oop.png "Pantalla 1")
 
 Pantalla 1
 
