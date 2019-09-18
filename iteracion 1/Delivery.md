@@ -37,33 +37,111 @@ Pantalla 1
 
 ### Actores
 
-1. Actor 1: descripción del actor 1.
-2. Actor 2: descripción del actor 2.
+1. Comercio: Es el negocio que desea vender sus productos a través de nuestra página.
+2. Cliente: Es la persona que desea comprar productos a través de nuesta página.
+3. Administrador: Persona encargada de la gestión de la página.
+
 
 ...
 
-_Por cada caso de uso especificar_
+#### Registro de comercio
+##### Actores: 
+Comercio
+##### Objetivo: 
+El objetivó de este caso de uso es el registro de un nuevo comercio que proveera un servicio o productos a clientes
+##### Flujo Principal:
+1. El actor selecciona registrar.
+2. El sistema devuelve las opciones de registro.
+3. El actor selecciona registrar como comercio.
+4. El sistema muestra el formulario para registrar como comercio
+5. El actor completa el formulario y acepta
+6. El sistema verifica que todos los campos obligatorios esten correctamente cargados.
+7. El sistema muestra el mensaje de Registrado con exito.
+8. El actor selecciona el ok.
+9. Termina el caso de uso.
+##### Flujo Alternativo:
+6.1 El sistema detecta que falta un campo obligatorio a cargar o mal cargado.
+6.2 Muestra un mensaje con el error.
+6.3 Vuelve al paso 5 del flujo principal.
 
-__Titulo del Caso de Uso__
+#### Gestión de Inventario
+##### Actor: 
+Comercio
+##### Objetivo: 
+el comercio cargara los productos con el stock de los ingredientes de estos, la cantidad y el valor de cada uno.
+##### Flujo Principal:
+1. El actor selecciona la pestaña Inventario.
+2. El sistema devuelve las opciones de esa pestaña.
+3. El actor selecciona nuevo.
+4. El sistema devuelve el formulario para los productos y los ingredientes.
+5. El actor llena el formulario.
+6. El actor presiona el botón aceptar.
+7. El sistema registra el nuevo inventario.
+8. Termina el caso de uso.
+##### Flujo Alternativo:
+#Modificación
+2.1 El actor selecciona modificar.
+2.2 El sistema devuelve los productos e ingredientes.
+2.3 El actor cambia lo que necesita
+2.4 El actor presiona el botón aceptar.
+2.5 El sistema registra la modificación.
+2.6 vuelve al paso 8 del flujo principal.
+#Eliminación
+2.1 El actor selecciona eliminar.
+2.2 El sistema devuelve los productos e ingredientes.
+2.3 El actor elimina lo que necesita.
+2.4 El actor presiona el botón aceptar.
+2.5 El sistema registra la modificación.
+2.6 vuelve al paso 8 del flujo principal.
 
-__Actores__: Especificar actores
+#### Generar Estadísticas
+##### Actor: 
+Comercio
+##### Objetivo: 
+A través del sistema proveer de estadísticas al comercio (producto más vendido, ingrediente más pedido, etc.).
+##### Flujo Principal:
+1. El actor pulsa la pestaña estadísticas.
+2. El sistema solicita un margen de tiempo.
+3. El actor ingresa el margen.
+4. El sistema devuelve las estadísticas de ese margen de tiempo. 
+##### Flujo Alternativa:
+2.1 El sistema no encuentra estadísticas en ese margen de tiempo.
+2.2 El sistema emite un mensaje con el error.
+2.3 Vuelve al paso 2 del flujo principal.
 
-__Objetivo__: Especificar objetivos
-
-__Flujo Principal__:
-
-1. ...
-2. ...
-3. ...
-
-_De ser necesario especificar flujos alternativos_
+#### Iniciar Sesión
+##### Actor: 
+Comercio
+##### Objetivo: 
+El comercio ya registrado accede a la pagina web.
+##### Flujo Principal:
+1. El actor selecciona Ingresar.
+2. El sistema pide Usuario y contraseña.
+3. El sistema verifica la existencia del Usuario.
+4. El sistema verifica que el usuario tenga esa contraseña.
+5. El actor ingresa a la página web.
+6. Termina el caso de uso.
+##### Flujo Alternativo:
+#Usuario Inválido
+3.1 El sistema no encuentra el usuario.
+3.2 Emite un mensaje de error.
+3.3 Vuelve al paso 2 del flujo principal.
+#Contraseña Inválida
+4.1 El sistema verifica que el usuario ingresado no tiene esa contraseña.
+4.2 El sistema emite un mensaje de error.
+4.3 Vuelve al paso 2 del flujo principal.
 
 ## Arquitectura
 
-- ...
-- ...
-- ...
-- ...
+Para desarrollar nuestro proyecto usaremos los siguientes programas y herramientas:
+- Visual Studio Code
+- GitHub
+- Insomnia
+- Apache NetBeans 11
+- Javalin
+- Junit
+- Maven
+
 
 ## Variante de aplicacion
 La aplicacion existente en la cual nos basamos es en pedidosya, globo, rappi. Nuestro sistema difiere de sus mecanicas con la cualidad de poder seleccionar los ingredientes de nuestro pedido, haciendo que nuestros clientes tengan la posibilidad de hacer pedidos personalizados.
