@@ -61,8 +61,11 @@ El objetivó de este caso de uso es el registro de un nuevo comercio que proveer
 9. Termina el caso de uso.
 ##### Flujo Alternativo:
 6.1 El sistema detecta que falta un campo obligatorio a cargar o mal cargado.
+
 6.2 Muestra un mensaje con el error.
+
 6.3 Vuelve al paso 5 del flujo principal.
+
 
 #### Gestión de Inventario
 ##### Actor: 
@@ -79,19 +82,32 @@ el comercio cargara los productos con el stock de los ingredientes de estos, la 
 7. El sistema registra el nuevo inventario.
 8. Termina el caso de uso.
 ##### Flujo Alternativo:
+
 #Modificación
 2.1 El actor selecciona modificar.
+
 2.2 El sistema devuelve los productos e ingredientes.
-2.3 El actor cambia lo que necesita
+
+2.3 El actor cambia lo que necesita.
+
 2.4 El actor presiona el botón aceptar.
+
 2.5 El sistema registra la modificación.
+
 2.6 vuelve al paso 8 del flujo principal.
+
 #Eliminación
+
 2.1 El actor selecciona eliminar.
+
 2.2 El sistema devuelve los productos e ingredientes.
+
 2.3 El actor elimina lo que necesita.
+
 2.4 El actor presiona el botón aceptar.
+
 2.5 El sistema registra la modificación.
+
 2.6 vuelve al paso 8 del flujo principal.
 
 #### Generar Estadísticas
@@ -122,13 +138,21 @@ El comercio ya registrado accede a la pagina web.
 5. El actor ingresa a la página web.
 6. Termina el caso de uso.
 ##### Flujo Alternativo:
+
 #Usuario Inválido
+
 3.1 El sistema no encuentra el usuario.
+
 3.2 Emite un mensaje de error.
+
 3.3 Vuelve al paso 2 del flujo principal.
+
 #Contraseña Inválida
+
 4.1 El sistema verifica que el usuario ingresado no tiene esa contraseña.
+
 4.2 El sistema emite un mensaje de error.
+
 4.3 Vuelve al paso 2 del flujo principal.
 
 ## Arquitectura
