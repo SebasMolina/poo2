@@ -121,8 +121,11 @@ A través del sistema proveer de estadísticas al comercio (producto más vendid
 3. El actor ingresa el margen.
 4. El sistema devuelve las estadísticas de ese margen de tiempo. 
 ##### Flujo Alternativa:
+
 2.1 El sistema no encuentra estadísticas en ese margen de tiempo.
+
 2.2 El sistema emite un mensaje con el error.
+
 2.3 Vuelve al paso 2 del flujo principal.
 
 #### Iniciar Sesión
