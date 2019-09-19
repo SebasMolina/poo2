@@ -25,12 +25,11 @@ public class Automovil {
  * @param modelo 
  */
     public Automovil(int potencia, String marca, String modelo) {
+        this.velocidad=0;
         this.potencia = potencia;
         this.marca = marca;
         this.modelo = modelo;
     }
-    
-    
     /*
 frenar() : que decrementa la velocidad, tomando el valor actual de velocidad
 diviendolo por 2.
@@ -49,16 +48,15 @@ diviendolo por 2.
         this.velocidad = velocidad;
     }
 
-    public int acelerar(){
-    
-        this.setVelocidad(this.getVelocidad()+this.getPotencia());
-        return (this.getVelocidad());
+    public void acelerar(){
+        this.velocidad =this.getVelocidad()+this.getPotencia();
+        
     }
     
-    public int frenar(){
+    public void frenar(){
         
         this.setVelocidad(this.getVelocidad()/2);
-        return (this.getVelocidad());
+        
     }
 /** 
  * La representacion en texto de un automovil   * @return un string

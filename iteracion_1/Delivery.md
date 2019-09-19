@@ -31,7 +31,7 @@ La aplicacion se desarrollara para plataforma web, la primera version saldra par
 
 ## Bocetos de Interfaz de Usuario
 
-Pantalla 1
+![Pantalla principal](pantalla.png)
 
 ## Casos de Uso
 
@@ -296,7 +296,7 @@ __Flujo Principal__:
 
 _Curso alternativo_
 
-# __aca ir completando las formas de pago.__
+
 - 3.1 
 
 - - -

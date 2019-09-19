@@ -1,6 +1,7 @@
 
 import com.sebas.proyectomaven.Automovil;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /*
@@ -14,17 +15,29 @@ import org.junit.jupiter.api.Test;
  * @author sebas
  */
 public class TestAutomovil {
+    
+    private Automovil auto;
+    
+    @BeforeEach
+    public void inicio () {
+        System.out.println("Inicio de test");
+        this.auto = new Automovil(10, "Fiat", "Uno");
+    }
+    
     @Test
     public void testAcelerar () {
-//testAcelerar() : Que verifique que el incremento de velocidad sea correcto, 
-//considerando una potencia de 10.
-        Automovil auto = new Automovil(10, "Fiat", "Uno");
-        assertEquals(10, auto.acelerar(), "10 + 0 = 10");
+        /** testAcelerar().
+         *  Que verifique que el incremento de velocidad sea correcto
+         *  considerando una potencia de 10.
+         * 
+         */
+        auto.acelerar();
+        assertEquals(10, this.auto.getVelocidad(), "10 + 0 = 10");
     }
     
     @Test
     public void testFrenar () {
-        Automovil auto = new Automovil(10, "Fiat", "Uno");
+        
         auto.acelerar();
         auto.frenar();
         assertEquals(5,auto.getVelocidad(),"10 / 2 = 5");
@@ -32,7 +45,7 @@ public class TestAutomovil {
     
     @Test
     public void testFrenarTotalmente () {
-        Automovil auto = new Automovil(10, "Fiat", "Uno");
+        
         auto.acelerar();
     //10 /2= 5 /2=2 /2=1 /2= 0; CUATRO VECES HAY QUE FRENAR.
         auto.frenar(); // vel=5
