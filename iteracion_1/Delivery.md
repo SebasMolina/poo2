@@ -212,12 +212,29 @@ __Explorar__
 
 __Actores__: Clientes
 
-__Objetivo__: Muestra todos los productos existentes en el catálogo.
+__Objetivo__: Muestra a los clientes las tendencias de los productos en el catálogo.
 
 __Flujo Principal__:
 
 1. Este caso de uso comienza cuando el Cliente presiona Explorar.
-2. El Sistema muestra el catálogo completo.
+2. El Sistema muestra los productos más elegidos por los clientes separado en categorias.
+
+- - - 
+
+__Buscar__
+
+__Actores__: Clientes
+
+__Objetivo__: El cliente busca los productos que quiere.
+
+__Flujo Principal__:
+
+1. Este caso de uso comienza cuando el Cliente se posiciona en la barra de busqueda.
+2. El Cliente ingresa lo que desea buscar y presiona buscar.
+3. El sistema devuelve lo que esta relacionado con la busqueda.
+
+_Curso alternativo_
+- 3.1 En el caso de que el cliente no haya escrito nada, o no encuentre lo que está buscando informar y termina el caso de uso.
 
 - - - 
 
@@ -297,7 +314,7 @@ __Flujo Principal__:
 _Curso alternativo_
 
 
-- 3.1 
+- 3.1 El cliente no selecciono forma de pago, informar el error. Vuelve a paso 3.
 
 - - -
 
@@ -342,6 +359,51 @@ _Curso alternativo_
 - 2.1 En caso de que el cliente no tenga direccion, ir a caso de uso suministrar direccion.
 - 3.1 En caso de que el cliente no haya realizado el pedido, ir a caso de uso hacer un pedido.
 - 4.1 En caso de que no se seleccionó un método de pago, ir a caso de uso seleccionar método de pago.
+
+- - -
+
+__Gestión de La aplicación Web__
+
+__Actores__: Administrador
+
+__Objetivo__: el objetivo de este caso de uso es que el administrador verifique los comercios que siguen activos y dar de baja los comercios que ya no prestan servicios.
+
+__Flujo principal__: 
+1. El actor solicita al sistema los registros de los comercios que no han abierto sesión durante un tiempo determinado.
+2. El sistema devuelve pantalla de registro de los comercios solicitados.
+3. El actor identifica los comercios a dar de baja.
+4. El sistema comprueba los comercios.
+5. El sistema notifica al usuario vía mail que si no accede a su cuenta dentro de x tiempo, puede ser eliminada (elimina la cuenta) de los comercios solicitados.
+6. Termina el caso de uso.
+
+_Flujo Alternativo_:
+
+- 1.1. No hay comercios registrados en el sistema.
+- 1.2. El sistema muestra el mensaje de error.
+- 1.3. Vuelve al paso 1.
+- 1.4. No hay comercios que cumplan con la condición de X tiempo.
+- 1.5. El sistema muestra el mensaje de error.
+- 1.6. Vuelve al paso 1.
+
+- - -
+
+__Moderar la aplicación Web__
+
+__Actores__: Administrador
+
+__Objetivos__: el objetivo de este caso de uso es que el administrador realice un control sobre los usuarios que no han cumplido con las normas y políticas de la aplicación.
+
+__Flujo principal__:
+1. El actor solicita registro de usuarios que han solicitado y cancelado productos.
+2. El sistema devuelve la lista de usuarios solicitada.
+3. El actor le informa a través de un mail la penalización.
+4. El sistema muestra mensaje de confirmación.
+5. Termina el caso de uso.
+
+_Flujo Alternativo_: 
+- 1.1 No hay usuarios que hayan cancelado productos.
+- 1.2 El sistema devuelve mensaje de error.
+- 1.3 Vuelve al paso 1.
 
 - - -
 - - - 
