@@ -28,3 +28,7 @@ __Visual Studio Code__
 #### Pagina para hacer las interfaces
 
 [Interfaces](https://draw.io/)
+
+#### Paginas de apis
+[Printfull](https://www.printful.com/es/docs/orders)
+[Mercado_Libre](https://developers.mercadolibre.com.ar/es_ar)
