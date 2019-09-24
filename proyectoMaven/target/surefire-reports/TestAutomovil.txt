@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: TestAutomovil
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.005 s <<< FAILURE! - in TestAutomovil
-TestAutomovil.testFrenar()  Time elapsed: 0.001 s  <<< FAILURE!
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.006 s <<< FAILURE! - in TestAutomovil
+TestAutomovil.testFrenarTotalmente()  Time elapsed: 0.002 s  <<< FAILURE!
 java.lang.NullPointerException
-	at TestAutomovil.testFrenar(TestAutomovil.java:41)
+	at TestAutomovil.testFrenarTotalmente(TestAutomovil.java:52)
 
 TestAutomovil.testAcelerar()  Time elapsed: 0 s  <<< FAILURE!
 java.lang.NullPointerException
-	at TestAutomovil.testAcelerar(TestAutomovil.java:34)
+	at TestAutomovil.testAcelerar(TestAutomovil.java:37)
 
-TestAutomovil.testFrenarTotalmente()  Time elapsed: 0 s  <<< FAILURE!
+TestAutomovil.testFrenar()  Time elapsed: 0 s  <<< FAILURE!
 java.lang.NullPointerException
-	at TestAutomovil.testFrenarTotalmente(TestAutomovil.java:49)
+	at TestAutomovil.testFrenar(TestAutomovil.java:44)
 

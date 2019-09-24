@@ -16,12 +16,15 @@ import org.junit.jupiter.api.Test;
  */
 public class TestAutomovil {
     
-    private Automovil auto;
+    public Automovil auto;
     
+    /** Inicio.
+     *  Lo que hace es instanciar el objeto por cada test.
+     */
     @BeforeEach
     public void inicio () {
-        System.out.println("Inicio de test");
-        this.auto = new Automovil(10, "Fiat", "Uno");
+        System.out.println("Inicio de test...");
+        auto = new Automovil(10, "Fiat", "Uno");
     }
     
     @Test
@@ -29,7 +32,6 @@ public class TestAutomovil {
         /** testAcelerar().
          *  Que verifique que el incremento de velocidad sea correcto
          *  considerando una potencia de 10.
-         * 
          */
         auto.acelerar();
         assertEquals(10, this.auto.getVelocidad(), "10 + 0 = 10");
@@ -37,7 +39,10 @@ public class TestAutomovil {
     
     @Test
     public void testFrenar () {
-        
+        /** testFrenar().
+         *  Que verifique que cuando acelero con una potencia 10
+         *  frene y nos de una velocidad de 5.
+         */
         auto.acelerar();
         auto.frenar();
         assertEquals(5,auto.getVelocidad(),"10 / 2 = 5");
