@@ -43,4 +43,5 @@ Ademas de eso proveer al cliente recomendaciones y ofertas correspondientes a su
 ### Pantalla Principal del Cliente
 ![Pantalla Principal Cliente](principalusser.png)
 
-## 
+## Diagrama de clases (No definitivo)
+![Diagrama de clase](diagrama_de_clase.png)
