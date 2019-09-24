@@ -424,6 +424,7 @@ Para desarrollar nuestro proyecto usaremos los siguientes programas y herramient
 - ZenUML
 - API de ML.
 - API de Printfull.
+- StarUML.
 
 ## Variante de aplicacion
 La aplicacion existente en la cual nos basamos es en pedidosya, globo, rappi. Nuestro sistema difiere de sus mecanicas con la cualidad de poder seleccionar los ingredientes de nuestro pedido, haciendo que nuestros clientes tengan la posibilidad de hacer pedidos personalizados.
