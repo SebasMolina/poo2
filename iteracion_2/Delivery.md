@@ -41,6 +41,6 @@ Ademas de eso proveer al cliente recomendaciones y ofertas correspondientes a su
 ![Pantalla Inisio de Sesion](iniciosesion.png)
 
 ### Pantalla Principal del Cliente
-![Pantalla Principal Cliente](pincipalusser.png)
+![Pantalla Principal Cliente](principalusser.png)
 
 ## 
