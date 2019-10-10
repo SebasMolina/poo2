@@ -10,7 +10,7 @@
 
 ## Visión 
 
-Desarrollaremos una aplicación donde se pueden registrar tanto usuarios, como también comercios proveedores de productos. Ambos deben poner una dirección donde se buscará los productos (si es una empresa) o donde se enviarán los productos (si es un cliente). La aplicación, a su vez, permite a las empresas mostrar sus catálogos de productos y los clientes pueden elegir y armar su orden.
+Desarrollaremos una aplicación donde se pueden registrar tanto usuarios, como también proveedores de servicios. Ambos deben poner una dirección donde se buscará los productos (si es una empresa) o donde se enviarán los productos (si es un cliente). La aplicación, a su vez, permite a las empresas mostrar sus catálogos de productos y los clientes pueden elegir y armar su orden.
 Ademas de eso proveer al cliente recomendaciones y ofertas correspondientes a su búsqueda, teniendo en cuenta sus elecciones y preferencias y al comercio, le generara estadisticas sobre los productos mas vendidos.
 
 ## Lista de características
