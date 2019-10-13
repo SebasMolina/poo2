@@ -107,7 +107,7 @@ _Curso alternativo_
 
 3.2 El sistema devuelve los productos e ingredientes.
 
-3.3 El actor elimina lo que necesita y presiona aceptar._Flujo Alternativo_:
+3.3 El actor elimina lo que necesita y presiona aceptar.
 
 3.4 El sistema registra la modificación.
 
@@ -139,8 +139,8 @@ _Curso alternativo_
 
 - - -
 
-# HACER BOCETO DE COMO SERIA ESTOOOOOOOOOO
-
+### Pantalla de Estadisticas
+![Pantalla de Estadisticas](GenerarEstadisticas.png)
 - - -
 
 __Iniciar Sesión__
