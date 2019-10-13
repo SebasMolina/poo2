@@ -69,7 +69,7 @@ _Curso alternativo_
 - - - 
 ### Pantalla de registro de proveedor de producto
 ![Pantalla Registro Comercio](registrocomercio.png)
-# modificar pantalla para que diga "proveedor de producto"
+
 - - -
 
 
