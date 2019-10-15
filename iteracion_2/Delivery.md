@@ -41,9 +41,9 @@ Nuestro sistema comprende a dos usuarios. El usuario que utiliza la aplicación 
 3. __Administrador__: Persona encargada de la gestión de la página.
 4. __Tiempo__: Efecto externo para el control del sistema.
 
-__Registrar proveedor de producto__
+## __Registrar proveedor de producto__
 
-__Actores__: Proveedor de productos
+__Actores__: Proveedor de productos.
 
 __Objetivo__: Registro de un nuevo proveedor de productos.
 
@@ -67,17 +67,57 @@ _Curso alternativo_
 6.3 Vuelve al paso 5 del flujo principal.
 
 - - - 
+falta pantalla donde selecciona "el registro"
 ### Pantalla de registro de proveedor de producto
 ![Pantalla Registro Comercio](registrocomercio.png)
 # modificar pantalla para que diga "proveedor de producto"
 - - -
 
+## __Registrar Usuario__
+
+__Actores__: Usuario.
+
+__Objetivo__: Registro de un nuevo usuario a la aplicación.
+
+__Flujo Principal__:
+
+1. Este caso de uso comienza cuando el Cliente ingresa a la opción registrarse.
+2. El sistema devuelve las opciones de registro.
+3. El actor selecciona registrar como usuario.
+4. El Sistema muestra el formulario de registro.
+5. El Cliente completa el formulario con nombre, apellido, mail, telefono, contraseña y presiona registrarse.
+6. El sistema verifica que todos los campos obligatorios esten correctamente cargados.
+7. El Sistema genera un nuevo cliente con los datos previstos.
+8. El Sistema informa que se ha registrado en forma exitosa.
+
+_Curso alternativo_
+
+#Campos faltantes
+
+6.1 El sistema detecta que falta un campo obligatorio a cargar o mal cargado.
+
+6.2 Muestra un mensaje con el error.
+
+6.3 Vuelve al paso 3 del flujo principal.
+
+#Usuario ya registrado
+
+6.1 El sistema detecta que el mail ya se encuentre registrado
+
+6.2 Muestra un mensaje con el error.
+
+6.3 Vuelve al paso 3 del flujo principal.
 
 - - -
+falta pantalla donde selecciona "el registro"
+### Pantalla de registro de usuario
+![Pantalla Registro Usuario](registrocliente.png)
+# modificar pantalla para que diga "usuario"
+- - -
 
-__Gestionar Inventario__
+## __Gestionar Inventario__
 
-__Actores__: Proveedor de productos
+__Actores__: Proveedor de productos.
 
 __Objetivo__: Cargar los productos, indicando stock, ingredientes, la cantidad y valor de cada uno.
 
@@ -93,6 +133,7 @@ __Flujo Principal__:
 _Curso alternativo_
 
 #Modificación
+
 3.1 El actor selecciona modificar.
 
 3.2 El sistema devuelve los productos e ingredientes.
@@ -116,9 +157,9 @@ _Curso alternativo_
 
 - - -
 
-__Proveer estadisticas al proveedor de productos__
+## __Proveer estadisticas al proveedor de productos__
 
-__Actores__: Proveedor de producto
+__Actores__: Proveedor de productos.
 
 __Objetivo__: A través del sistema proveer de estadísticas al proveedor de productos (producto más vendido, ingrediente más pedido, etc.).
 
@@ -143,9 +184,9 @@ _Curso alternativo_
 
 - - -
 
-__Iniciar Sesión__
+## __Iniciar Sesión__
 
-__Actores__: Proveedor de productos, Usuario
+__Actores__: Proveedor de productos, Usuario.
 
 __Objetivo__: Un actor ya registrado quiere acceder a la pagina web.
 
@@ -163,7 +204,7 @@ _Curso alternativo_
 
 4.1 El sistema no encuentra el usuario.
 
-4.2 muestra un mensaje de error.
+4.2 Muestra un mensaje de error.
 
 #Contraseña Inválida
 
@@ -177,25 +218,135 @@ _Curso alternativo_
 ![Pantalla Principal usuario](principalusser.png)
 - - - 
 
+## __Buscar__
 
+__Actores__: Usuario.
 
+__Objetivo__: El usuario busca los productos o menúes que quiere.
 
+__Flujo Principal__:
+
+1. Este caso de uso comienza cuandpresiona realizar pedido.o el usuario se posiciona en la barra de busqueda.
+2. El usuario ingresa lo que desea buscar y presiona buscar.
+3. El sistema devuelve productos relacionados con la busqueda.
+
+_Curso alternativo_
+
+#Busqueda no encontrada
+
+3.1 En el caso de que el sistema no encuentre productos relacionados.
+
+3.2 Muestra un mensaje de error.
+
+- - - 
+## agregar boceto de pantalla "busqueda"
+- - -
+
+## __Seleccionar menú__
+
+__Actores__: Usuario.
+
+__Objetivo__: Seleccionar menúes que se agregarán al pedido.
+
+__Flujo Principal__:
+
+1. Este caso de uso comienza cuando el Usuario selecciona un menú.
+2. El Sistema registra que se seleccionó dicho menú.
+3. El Sistema muestra la información del menú seleccionado.
 
 - - -
-- 
-## Bocetos de Interfaz de Usuario
-### Pantalla Principal
-![Pantalla principal](pantallaprincipal.png)
+## agregar boceto de pantalla
+- - -
 
-### Pantalla de registro de usuario
-![Pantalla Registro Usuario](registrocliente.png)
+__Seleccionar proveedor de producto__
 
-### Pantalla de registro de proveedor de producto
-![Pantalla Registro Comercio](registrocomercio.png)
+__Actores__: Usuario
+
+__Objetivo__: Selecciona un proveedor de productos para ver los menúes que ofrecen.
+
+__Flujo Principal__:
+
+1. Este caso de uso comienza cuando el usuario selecciona un proveedor de productos de la lista.
+2. El Sistema registra que se seleccionó dicho proveedor de productos.
+3. El Sistema muestra los menúes que ofrece el proveedor de productos.
+
+- - -
+## agregar boceto de pantalla
+- - -
+
+## __Agregar menú a un pedido__
+
+__Actores__: Usuario
+
+__Objetivo__: Funcionalidad ofrecida para agregar menúes a un pedido.
+
+__Flujo Principal__:
+
+1. Este caso de uso comienza cuando el usuario selecciona un menú y presiona agregar al pedido.
+2. El sistema verifica que el Cliente esta logueado.
+3. El sistema verifica el proveedor de productos seleccionados.
+4. El sistema verifica el menú seleccionado.
+5. El sistema registra el pedido que realiza el cliente logueado.
+6. El sistema informa que se realizo el pedido de forma exitosa. 
+
+_Curso alternativo_
+
+- 2.1 El cliente no está logueado, ir a caso de uso iniciar sesion.
+- 3.1 El cliente no selecciono ningún comercio, ir a caso de uso seleccionar comercio.
+- 4.1 El cliente no selecciono ningún menú, ir a caso de uso seleccionar menú. 
+
+- - -
+## agregar boceto de pantalla
+- - - 
+
+## __Cancelar Pedido__
+
+__Actores__: Usuario
+
+__Objetivo__: Funcionalidad ofrecida para descartar un pedido.
+
+__Flujo Principal__:
+
+1. Este caso de uso comienza cuando el usuario selecciona cancelar pedido.
+2. El sistema muestra un pop-up de confirmacion que pregunta ¿desea cancelar el pedido?
+3. El usuario presiona en el boton si.
+4. El sistema registra la opcion marcada del usuario y quita los menues del pedido.
+5. El sistema informa que se cancelo pedido de forma exitosa. 
+
+_Curso alternativo_
+
+#No cancela el pedido
+3.1 En caso de que el usuario presiona en el boton de no.
+3.2 El sistema registra la opcion marcada.
+3.3 Vuelve a la pantalla anterior.
+
+- - -
+## agregar boceto de pantalla
+- - -
+
+## __Moderar la aplicación Web__
+
+__Actores__: Administrador
+
+__Objetivos__: el objetivo de este caso de uso es que el administrador realice un control sobre los usuarios que no han cumplido con las normas y políticas de la aplicación.
+
+__Flujo principal__:
+1. El actor solicita registro de usuarios que han solicitado y cancelado productos.
+2. El sistema devuelve la lista de usuarios solicitada.
+3. El actor le informa a través de un mail la penalización.
+4. El sistema muestra mensaje de confirmación.
+5. Termina el caso de uso.
+
+_Flujo Alternativo_: 
+
+1.1 No hay usuarios que hayan cancelado productos.
+
+1.2 El sistema devuelve mensaje de error.
+
+1.3 Vuelve al paso 1.
+
+- - -
+## agregar boceto de pantalla
+- - -
 
 
-
-
-
-## Diagrama de clases (No definitivo)
-![Diagrama de clase](diagrama_de_clase.png)
