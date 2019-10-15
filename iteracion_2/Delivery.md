@@ -34,6 +34,9 @@ Nuestro sistema comprende a dos usuarios. El usuario que utiliza la aplicación 
 
 ## Casos de Uso
 
+### Diagrama de casos de uso
+![Diagrama casos de uso](dia_casos_uso.png)
+
 ### Actores
 
 1. __Proveedor productos__: Es el negocio que desea comercializar sus productos a través de la app.
@@ -41,7 +44,7 @@ Nuestro sistema comprende a dos usuarios. El usuario que utiliza la aplicación 
 3. __Administrador__: Persona encargada de la gestión de la página.
 4. __Tiempo__: Efecto externo para el control del sistema.
 
-## __Registrar proveedor de producto__
+## __1. Registrar proveedor de producto__
 
 __Actores__: Proveedor de productos.
 
@@ -70,10 +73,9 @@ _Curso alternativo_
 falta pantalla donde selecciona "el registro"
 ### Pantalla de registro de proveedor de producto
 ![Pantalla Registro Comercio](registrocomercio.png)
-
 - - -
 
-## __Registrar Usuario__
+## __2. Registrar Usuario__
 
 __Actores__: Usuario.
 
@@ -115,7 +117,7 @@ falta pantalla donde selecciona "el registro"
 # modificar pantalla para que diga "usuario"
 - - -
 
-## __Gestionar Inventario__
+## __3. Gestionar Inventario__
 
 __Actores__: Proveedor de productos.
 
@@ -153,11 +155,11 @@ _Curso alternativo_
 3.4 El sistema registra la modificación.
 
 - - - 
-# HACER BOCETO DE COMO SERIA ESTOOOOOOOOOO
-
+### Pantalla de Gestión Inventario
+![Pantalla de gestión](GestionInventario.png)
 - - -
 
-## __Proveer estadisticas al proveedor de productos__
+## __4. Proveer estadisticas al proveedor de productos__
 
 __Actores__: Proveedor de productos.
 
@@ -179,12 +181,11 @@ _Curso alternativo_
 2.3 Vuelve al paso 2 del flujo principal.
 
 - - -
-
 ### Pantalla de Estadisticas
 ![Pantalla de Estadisticas](GenerarEstadisticas.png)
 - - -
 
-## __Iniciar Sesión__
+## __5. Iniciar Sesión__
 
 __Actores__: Proveedor de productos, Usuario.
 
@@ -218,7 +219,7 @@ _Curso alternativo_
 ![Pantalla Principal usuario](principalusser.png)
 - - - 
 
-## __Buscar__
+## __6. Buscar__
 
 __Actores__: Usuario.
 
@@ -242,7 +243,7 @@ _Curso alternativo_
 ## agregar boceto de pantalla "busqueda"
 - - -
 
-## __Seleccionar menú__
+## __7. Seleccionar menú__
 
 __Actores__: Usuario.
 
@@ -258,7 +259,7 @@ __Flujo Principal__:
 ## agregar boceto de pantalla
 - - -
 
-__Seleccionar proveedor de producto__
+## __8. Seleccionar proveedor de producto__
 
 __Actores__: Usuario
 
@@ -274,7 +275,7 @@ __Flujo Principal__:
 ## agregar boceto de pantalla
 - - -
 
-## __Agregar menú a un pedido__
+## __9. Agregar menú a un pedido__
 
 __Actores__: Usuario
 
@@ -285,21 +286,22 @@ __Flujo Principal__:
 1. Este caso de uso comienza cuando el usuario selecciona un menú y presiona agregar al pedido.
 2. El sistema verifica que el Cliente esta logueado.
 3. El sistema verifica el proveedor de productos seleccionados.
-4. El sistema verifica el menú seleccionado.
-5. El sistema registra el pedido que realiza el cliente logueado.
-6. El sistema informa que se realizo el pedido de forma exitosa. 
-
+4. El sistema agrega el menú seleccionado al pedido.
+5. El usuario ingresa la cantidad.
+6. El sistema registra la cantidad y lo muestra en el pedido.
 _Curso alternativo_
 
-- 2.1 El cliente no está logueado, ir a caso de uso iniciar sesion.
-- 3.1 El cliente no selecciono ningún comercio, ir a caso de uso seleccionar comercio.
-- 4.1 El cliente no selecciono ningún menú, ir a caso de uso seleccionar menú. 
+#Usuario no está logueado
 
+3.1 El usuario no está logueado, ir a caso de uso iniciar sesion.
+
+#Cantidad no ingresada
+5.1 El usuario no ingreso una cantidad, el sistema informa con un error.
 - - -
 ## agregar boceto de pantalla
 - - - 
 
-## __Cancelar Pedido__
+## __10. Cancelar Pedido__
 
 __Actores__: Usuario
 
@@ -316,15 +318,41 @@ __Flujo Principal__:
 _Curso alternativo_
 
 #No cancela el pedido
+
 3.1 En caso de que el usuario presiona en el boton de no.
+
 3.2 El sistema registra la opcion marcada.
+
 3.3 Vuelve a la pantalla anterior.
 
 - - -
 ## agregar boceto de pantalla
 - - -
+  ## __11. Agregar dirección__
 
-## __Moderar la aplicación Web__
+__Actores__: Usuario
+
+__Objetivo__: Agregar una dirección del usuario.
+
+__Flujo Principal__:
+
+1. Este caso de uso comienza cuando el Usuario presiona agregar una dirección.
+2. El Sistema verifica que el cliente esté logueado.
+3. El sistema muestra el formulario para completar.
+4. El cliente ingresa la calle, número, piso, departamento, codigo postal.
+5. El sistema guarda y enlaza los datos con el cliente logueado.
+6. El sistema informa que se enlazó los datos de forma exitosa.
+
+_Curso alternativo_
+
+2.1 En caso de que el cliente no esté logueado, ir a caso de uso iniciar sesión.
+
+5.1 En caso de que los datos esten vacios, informar error y volver al paso 4.
+- - -
+## agregar boceto de pantalla
+- - -
+
+## __12. Moderar la aplicación Web__
 
 __Actores__: Administrador
 
@@ -349,4 +377,72 @@ _Flujo Alternativo_:
 ## agregar boceto de pantalla
 - - -
 
+__13. Seleccionar método de pago__
 
+__Actores__: Usuario
+
+__Objetivo__: Selecciona los metodos de pago para pagar el pedido.
+
+__Flujo Principal__:
+
+1. Este caso de uso comienza cuando el Cliente presiona seleccionar método de pago.
+2. El Sistema muestra los métodos de pago disponibles para realizar el pedido.
+3. El Cliente selecciona un método de pago.
+4. El sistema verifica que método de pago seleccionó el cliente.
+5. El sistema registra el método de pago seleccionada.
+
+_Curso alternativo_
+
+#método de pago no seleccionada
+
+3.1 El cliente no selecciono método de pago, el sistema muestra un error.
+
+- - -
+## agregar boceto de pantalla
+- - -
+
+__14. Confirmar Pedido__
+
+__Actores__: Usuario
+
+__Objetivo__: Funcionalidad para confirmar el pedido, asi el proveedor de productos puede realizarlo y poder enviarlo a la direccion correspondiente.
+
+__Flujo Principal__:
+
+1. Este caso de uso comienza cuando el usuario presiona confirmar pedido.
+2. El Sistema pregunta que dirección usará el usuario.
+3. El usuario ingresa la dirección.
+4. El Sistema pregunta que método de pago utilizará.
+5. El usuario ingresa la método de pago.
+6. El sistema verifica que el metodo de pago este correcto.
+7. El Sistema registra la confirmación del pedido.
+8. El Sistema informa que se envió el pedido al proveedor de forma exitosa.
+9. El sistema manda una notificación al proveedor de porductos con el pedido del usuario.
+
+---
+## agregar boceto de pantalla
+---
+
+__15. Calificar proveedor de productos__
+
+__Actores__: Usuario
+
+__Objetivo__: Calificar al proveedor de productos en un formato del 1 - 5 valorando la calidad de los productos ofrecidos por éste.
+
+__Flujo Principal__:
+
+1. Este caso de uso comienza cuando el usuario presiona calificar.
+2. El sistema muestra el formulario de calificacion.
+3. El usuario completa el formulario puntuando y dejando una opinion. Al finalizar presiona guardar.
+4. El sistema registra la valoración y en el sector de opiniones deja la opinion del usuario.
+5. El sistema informa al proveedor de productos que se realizo una calificación.
+
+---
+## agregar boceto de pantalla
+---
+
+### Pantalla Principal
+![Pantalla principal](pantallaprincipal.png)
+
+## Diagrama de clases
+![Diagrama de clase](diagrama_de_clases.png)
