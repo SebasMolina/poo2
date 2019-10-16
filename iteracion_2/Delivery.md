@@ -30,7 +30,7 @@ Ademas de eso proveer al usuario recomendaciones y ofertas basadas en sus compra
 
 ## Análisis de Dominio
 
-Nuestro sistema comprende a dos usuarios. El usuario que utiliza la aplicación para realizar pedidos o consultar precios, por otro lado, tenemos a los usuarios que se registran como proveedores de productos. Éstos se encargan de publicar menúes, los cuales se muestran en la pantalla principal de navegación de la aplicación. Éstos menúes tienen la caracteristica de que los usuarios pueden personalizar los ingredientes que lo componen. Al realizarse el pedido, el proveedor de productos, deberá realizar el servicio de delivery, si así lo especificó el usuario que solicito el pedido. Además la aplicación permitirá valorar a los proveedores de productos y generar estadísticas de datos específicos en un rango de tiempo.
+Nuestro sistema comprende a dos usuarios. El usuario que utiliza la aplicación para realizar pedidos o consultar precios, por otro lado, tenemos a los usuarios que se registran como proveedores de productos. Éstos se encargan de publicar productos, los cuales se muestran en la pantalla principal de navegación de la aplicación. Éstos productos tienen la caracteristica de que los usuarios pueden personalizar los ingredientes que lo componen. Al realizarse el pedido, el proveedor de productos, deberá realizar el servicio de delivery, si así lo especificó el usuario que solicito el pedido. Además la aplicación permitirá valorar a los proveedores de productos y generar estadísticas de datos específicos en un rango de tiempo.
 
 ## Casos de Uso
 
@@ -42,7 +42,6 @@ Nuestro sistema comprende a dos usuarios. El usuario que utiliza la aplicación 
 1. __Proveedor productos__: Es el negocio que desea comercializar sus productos a través de la app.
 2. __Usuario__: Es la persona que desea comprar productos a través de nuesta página.
 3. __Administrador__: Persona encargada de la gestión de la página.
-4. __Tiempo__: Efecto externo para el control del sistema.
 
 ## __1. Registrar proveedor de producto__
 
@@ -224,7 +223,7 @@ _Curso alternativo_
 
 __Actores__: Usuario.
 
-__Objetivo__: El usuario busca los productos o menúes que quiere.
+__Objetivo__: El usuario busca los productos que quiere.
 
 __Flujo Principal__:
 
@@ -245,17 +244,17 @@ _Curso alternativo_
 ![Pantalla Busqueda](pantallabuscar.png)
 - - -
 
-## __7. Seleccionar menú__
+## __7. Seleccionar producto__
 
 __Actores__: Usuario.
 
-__Objetivo__: Seleccionar menúes que se agregarán al pedido.
+__Objetivo__: Seleccionar productos que se agregarán al pedido.
 
 __Flujo Principal__:
 
-1. Este caso de uso comienza cuando el Usuario selecciona un menú.
-2. El Sistema registra que se seleccionó dicho menú.
-3. El Sistema muestra la información del menú seleccionado.
+1. Este caso de uso comienza cuando el Usuario selecciona un producto.
+2. El Sistema registra que se seleccionó dicho producto.
+3. El Sistema muestra la información del producto seleccionado.
 
 - - -
 ## agregar boceto de pantalla
@@ -265,30 +264,30 @@ __Flujo Principal__:
 
 __Actores__: Usuario
 
-__Objetivo__: Selecciona un proveedor de productos para ver los menúes que ofrecen.
+__Objetivo__: Selecciona un proveedor de productos para ver que ofrece.
 
 __Flujo Principal__:
 
 1. Este caso de uso comienza cuando el usuario selecciona un proveedor de productos de la lista.
 2. El Sistema registra que se seleccionó dicho proveedor de productos.
-3. El Sistema muestra los menúes que ofrece el proveedor de productos.
+3. El Sistema muestra los productos que ofrece el proveedor de productos.
 
 - - -
 ## agregar boceto de pantalla
 - - -
 
-## __9. Agregar menú a un pedido__
+## __9. Agregar producto a un pedido__
 
 __Actores__: Usuario
 
-__Objetivo__: Funcionalidad ofrecida para agregar menúes a un pedido.
+__Objetivo__: Agregar productos a un pedido.
 
 __Flujo Principal__:
 
-1. Este caso de uso comienza cuando el usuario selecciona un menú y presiona agregar al pedido.
+1. Este caso de uso comienza cuando el usuario selecciona un producto y presiona agregar al pedido.
 2. El sistema verifica que el Cliente esta logueado.
 3. El sistema verifica el proveedor de productos seleccionados.
-4. El sistema agrega el menú seleccionado al pedido.
+4. El sistema agrega el producto seleccionado al pedido.
 5. El usuario ingresa la cantidad.
 6. El sistema registra la cantidad y lo muestra en el pedido.
 _Curso alternativo_
@@ -314,7 +313,7 @@ __Flujo Principal__:
 1. Este caso de uso comienza cuando el usuario selecciona cancelar pedido.
 2. El sistema muestra un pop-up de confirmacion que pregunta ¿desea cancelar el pedido?
 3. El usuario presiona en el boton si.
-4. El sistema registra la opcion marcada del usuario y quita los menues del pedido.
+4. El sistema registra la opcion marcada del usuario y quita los productos del pedido.
 5. El sistema informa que se cancelo pedido de forma exitosa. 
 
 _Curso alternativo_

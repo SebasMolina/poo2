@@ -6,5 +6,10 @@
 package com.integrador.nyandelivery;
 
 public class Persona {
+    private int id;
+    private String mail;
+    private String contraseña;
+    private String nombre;
+    private String apellido;
     
 }
