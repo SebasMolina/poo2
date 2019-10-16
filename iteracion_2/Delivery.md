@@ -70,7 +70,8 @@ _Curso alternativo_
 6.3 Vuelve al paso 5 del flujo principal.
 
 - - - 
-falta pantalla donde selecciona "el registro"
+### Pantalla de seleccion de registro
+![Pantalla eleccion registro](pantallaeleccionregistro.png)
 ### Pantalla de registro de proveedor de producto
 ![Pantalla Registro Comercio](registrocomercio.png)
 - - -
@@ -111,10 +112,10 @@ _Curso alternativo_
 6.3 Vuelve al paso 3 del flujo principal.
 
 - - -
-falta pantalla donde selecciona "el registro"
+### Pantalla de seleccion de registro
+![Pantalla eleccion registro](pantallaeleccionregistro.png)
 ### Pantalla de registro de usuario
 ![Pantalla Registro Usuario](registrocliente.png)
-# modificar pantalla para que diga "usuario"
 - - -
 
 ## __3. Gestionar Inventario__
@@ -227,7 +228,7 @@ __Objetivo__: El usuario busca los productos o menúes que quiere.
 
 __Flujo Principal__:
 
-1. Este caso de uso comienza cuandpresiona realizar pedido.o el usuario se posiciona en la barra de busqueda.
+1. Este caso de uso comienza cuando presiona realizar pedido o el usuario se posiciona en la barra de busqueda.
 2. El usuario ingresa lo que desea buscar y presiona buscar.
 3. El sistema devuelve productos relacionados con la busqueda.
 
@@ -240,7 +241,8 @@ _Curso alternativo_
 3.2 Muestra un mensaje de error.
 
 - - - 
-## agregar boceto de pantalla "busqueda"
+### Pantalla Busqueda
+![Pantalla Busqueda](pantallabuscar.png)
 - - -
 
 ## __7. Seleccionar menú__
