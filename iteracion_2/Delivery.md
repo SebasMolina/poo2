@@ -329,7 +329,7 @@ _Curso alternativo_
 - - -
 ## agregar boceto de pantalla
 - - -
-  ## __11. Agregar dirección__
+## __11. Agregar dirección__
 
 __Actores__: Usuario
 

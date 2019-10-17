@@ -1,29 +1,21 @@
 
 package com.integrador.nyandelivery;
 
+import java.util.ArrayList;
+
 public class Pedido {
     private int id;
-    private Producto[] productos;
-    private int cant;
-
+    private ArrayList<Producto> productos;
+    private String notas;
+    
     public Pedido() {
+        productos = new ArrayList<>();
     }
 
     public int getId() {
         return id;
     }
 
-    public Producto[] getProductos() {
-        return productos;
-    }
-
-    public int getCant() {
-        return cant;
-    }
-
-    public void setCant(int cant) {
-        this.cant = cant;
-    }
     
     
     
