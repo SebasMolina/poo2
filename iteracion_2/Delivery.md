@@ -378,7 +378,7 @@ _Flujo Alternativo_:
 ## agregar boceto de pantalla
 - - -
 
-__13. Seleccionar método de pago__
+## __13. Seleccionar método de pago__
 
 __Actores__: Usuario
 
@@ -402,7 +402,7 @@ _Curso alternativo_
 ## agregar boceto de pantalla
 - - -
 
-__14. Confirmar Pedido__
+## __14. Confirmar Pedido__
 
 __Actores__: Usuario
 
@@ -424,7 +424,7 @@ __Flujo Principal__:
 ## agregar boceto de pantalla
 ---
 
-__15. Calificar proveedor de productos__
+## __15. Calificar proveedor de productos__
 
 __Actores__: Usuario
 
@@ -441,6 +441,30 @@ __Flujo Principal__:
 ---
 ## agregar boceto de pantalla
 ---
+
+## __16. Generar comprobante__
+
+__Actores__: Proveedor de producto.
+
+__Objetivo__: El proveedor genera un ticket por cada pedido que el usuario realiza.
+
+__Flujo Principal__:
+
+1. Este caso de uso comienza cuando el proveedor de productos presiona generar comprobante.
+2. El sistema pregunta de qué pedido desea realizar el comprobante.
+3. El proveedor de productos ingresa el numero de pedido.
+4. El sistema trae la descripcion del pedido y calcula el total.
+5. El proveedor de productos selecciona mail y presiona continuar.
+6. El sistema manda el comprobante al correo del usuario.
+
+
+
+---
+## agregar boceto de pantalla
+---
+
+
+
 
 ### Pantalla Principal
 ![Pantalla principal](pantallaprincipal.png)

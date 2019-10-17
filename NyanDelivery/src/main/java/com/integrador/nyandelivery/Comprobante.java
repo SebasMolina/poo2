@@ -6,6 +6,6 @@
 package com.integrador.nyandelivery;
 
 
-public class Factura {
+public class Comprobante {
     
 }
