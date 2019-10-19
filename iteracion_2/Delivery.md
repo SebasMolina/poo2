@@ -325,7 +325,7 @@ _Curso alternativo_
 
 - - -
 - - -
-## __11. Agregar dirección__
+## __11. Agregar Ubicacion__
 
 __Actores__: Usuario
 
@@ -346,7 +346,8 @@ _Curso alternativo_
 
 5.1 En caso de que los datos esten vacios, informar error y volver al paso 4.
 - - -
-## agregar boceto de pantalla
+### Pantalla Agregar Ubicacion
+![Pantalla Agregar Ubicacion](agregarubicacion.png)
 - - -
 
 ## __12. Moderar la aplicación Web__
@@ -435,7 +436,8 @@ __Flujo Principal__:
 5. El sistema informa al proveedor de productos que se realizo una calificación.
 
 ---
-## agregar boceto de pantalla
+### Clasificar Proveedor
+![Pantalla clasificar proveedor](OpinionUsuario.png)
 ---
 
 ## __16. Generar comprobante__
@@ -456,7 +458,8 @@ __Flujo Principal__:
 
 
 ---
-## agregar boceto de pantalla
+### Pantalla Generar Comprobante
+![Pantalla Generar Comprobante](GenerarComprobante.png)
 ---
 
 
