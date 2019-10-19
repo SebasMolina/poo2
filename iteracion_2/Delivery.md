@@ -257,7 +257,6 @@ __Flujo Principal__:
 3. El Sistema muestra la información del producto seleccionado.
 
 - - -
-## agregar boceto de pantalla
 - - -
 
 ## __8. Seleccionar proveedor de producto__
@@ -273,7 +272,6 @@ __Flujo Principal__:
 3. El Sistema muestra los productos que ofrece el proveedor de productos.
 
 - - -
-## agregar boceto de pantalla
 - - -
 
 ## __9. Agregar producto a un pedido__
@@ -299,7 +297,6 @@ _Curso alternativo_
 #Cantidad no ingresada
 5.1 El usuario no ingreso una cantidad, el sistema informa con un error.
 - - -
-## agregar boceto de pantalla
 - - - 
 
 ## __10. Cancelar Pedido__
@@ -327,7 +324,6 @@ _Curso alternativo_
 3.3 Vuelve a la pantalla anterior.
 
 - - -
-## agregar boceto de pantalla
 - - -
 ## __11. Agregar dirección__
 
@@ -399,7 +395,6 @@ _Curso alternativo_
 3.1 El cliente no selecciono método de pago, el sistema muestra un error.
 
 - - -
-## agregar boceto de pantalla
 - - -
 
 ## __14. Confirmar Pedido__
@@ -421,7 +416,8 @@ __Flujo Principal__:
 9. El sistema manda una notificación al proveedor de porductos con el pedido del usuario.
 
 ---
-## agregar boceto de pantalla
+### Pantalla Armar pedido (caso de uso 7-8-9-10-13-14) 
+![Pantalla armarpedido](armarpedido.png)
 ---
 
 ## __15. Calificar proveedor de productos__
