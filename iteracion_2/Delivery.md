@@ -347,7 +347,7 @@ _Curso alternativo_
 5.1 En caso de que los datos esten vacios, informar error y volver al paso 4.
 - - -
 ### Pantalla Agregar Ubicacion
-![Pantalla Agregar Ubicacion](agregarubicacion.png)
+![Pantalla Agregar Ubicacion](AgregarUbicacion.png)
 - - -
 
 ## __12. Moderar la aplicación Web__
@@ -462,11 +462,21 @@ __Flujo Principal__:
 ![Pantalla Generar Comprobante](GenerarComprobante.png)
 ---
 
-
-
-
-### Pantalla Principal
+# Pantalla Principal
 ![Pantalla principal](pantallaprincipal.png)
 
-## Diagrama de clases
+# Diagrama de clases
+
 ![Diagrama de clase](diagrama_de_clases.png)
+
+# Documentacion API
+
+__Dirección donde se encuentra__
+
+integrador-poo2 --> Documentacion Api
+
+# Java Doc.
+
+__Está en el proyecto maven.__
+
+integrador-poo2 --> NyanDelivery --> target --> javadoc

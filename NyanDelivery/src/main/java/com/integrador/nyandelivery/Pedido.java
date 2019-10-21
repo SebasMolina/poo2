@@ -13,7 +13,7 @@ public class Pedido {
  * 
  */    
     public Pedido() {
-        productos = new ArrayList<>();
+        this.productos = new ArrayList<>();
     }
 /** Constructor.
  * Parametros:

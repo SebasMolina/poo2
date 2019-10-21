@@ -6,7 +6,8 @@ import java.util.ArrayList;
 public class Producto {
     private int id;
     private String nombre;
-//    private int cantidad;
+    private ProveedorProducto Comercio;
+    private int cantidad;
     private ArrayList<Ingrediente> ingredientes;
     private boolean IngredientesSeleccionables;
     private double precio;
@@ -19,11 +20,13 @@ public class Producto {
 /** Constructor.
  * Parametros:
  * @param nombre
+ * @param comercio
  * @param IngredientesSeleccionables
  * @param precio 
  */
-    public Producto(String nombre, boolean IngredientesSeleccionables, double precio) {
+    public Producto(String nombre, ProveedorProducto comercio, boolean IngredientesSeleccionables, double precio) {
         this.nombre = nombre;
+        this.Comercio = comercio;
         this.IngredientesSeleccionables = IngredientesSeleccionables;
         this.precio = precio;
     }
@@ -97,8 +100,35 @@ public class Producto {
     public void eliminarIngrediente(Ingrediente ingrediente){
         this.ingredientes.remove(ingrediente);
     }
+/** Obtener el proveedor de productos.
+ * 
+ * @return (ProveedorProducto comercio)
+ */
+    public ProveedorProducto getComercio() {
+        return Comercio;
+    }
+/** Agregar un proveedor de productos.
+ * 
+ * @param Comercio 
+ */
+    public void setComercio(ProveedorProducto Comercio) {
+        this.Comercio = Comercio;
+    }
+/** Obtener la cantidad del producto.
+ * Sirve para el pedido.
+ * @return (int cantidad)
+ */
+    public int getCantidad() {
+        return cantidad;
+    }
+/** Agregar una cantidad al producto.
+ * Sirve para el pedido.
+ * @param cantidad 
+ */
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
  
-    
     
     
 }
