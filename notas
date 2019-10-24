@@ -19,3 +19,19 @@ hay que hacer test de las clases que hacemos en el proyecto.
 4. __Tiempo__: Efecto externo para el control del sistema.
 AGREGAR RAZON SOCIAL PARA LA EMPRESA, agregar las apis de google y facebook
 
+presentacion de la iteracion 2
+    hacer una copia de la iteracion para tener una lineabilidad del proyecto
+    librerias graficas para sacar las estadisticas del proveedor
+    JavaScript: char.js libre
+    realizar abm de quejas con pantallas para ver quien tiene mas quejas segun grafo de barras
+    los 10 o 15 con mas quejas
+    con enlaces para acceder a perfil
+    mostrar listado con los detalles de quejas
+
+    pantalla de enviar notificacion de quejas
+    quejas privadas y reseñas publicas
+
+    generar diagrama de clases con el start uml
+    
+
+
