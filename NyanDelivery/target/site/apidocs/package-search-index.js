@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"com.integrador.nyandelivery"}]
+packageSearchIndex = [{"l":"modelo"}]

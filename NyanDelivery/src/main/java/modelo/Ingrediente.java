@@ -1,9 +1,11 @@
 
-package com.integrador.nyandelivery;
+package modelo;
 
-
+/** ingrediente: se debe especificar el nombre y la cantidad.
+ * 
+ * 
+ */
 public class Ingrediente {
-
     private int id;
     private String nombre;
     private int cantidad;

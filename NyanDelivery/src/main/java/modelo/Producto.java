@@ -1,5 +1,5 @@
 
-package com.integrador.nyandelivery;
+package modelo;
 
 import java.util.ArrayList;
 

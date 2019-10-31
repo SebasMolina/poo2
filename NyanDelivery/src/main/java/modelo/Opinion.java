@@ -1,8 +1,7 @@
 
-package com.integrador.nyandelivery;
+package modelo;
 
 public class Opinion {
-
     private int id;
     private ProveedorProducto proveedor;
     private int valoracion;
@@ -33,7 +32,7 @@ public class Opinion {
     }
 /** Obtener el proveedor de productos de la opinion.
  *  
- * @return 
+ * @return (ProveedorProducto proveedor)
  */    
     public ProveedorProducto getProveedor() {
         return proveedor;

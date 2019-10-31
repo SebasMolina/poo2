@@ -1,6 +1,17 @@
 
-package com.integrador.nyandelivery;
+package modelo;
 
+import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/** Clase abstracta persona.
+ * Sirve para guardar el id, mail, contraseña, nombre y apellido.
+ * 
+ */
 public abstract class Persona {
     private int id;
     private String mail;
@@ -42,7 +53,7 @@ public abstract class Persona {
      * @param contraseña 
      */
     public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+        this.contraseña= getMD5(getMD5(contraseña));
     }
     /** Obtener nombre.
      * @return (String nombre)
@@ -68,6 +79,21 @@ public abstract class Persona {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
-    
+
+    private String getMD5(String clave) {
+    try {
+        MessageDigest md = MessageDigest.getInstance("MD5");
+        byte[] messageDigest = md.digest(clave.getBytes());
+        BigInteger number = new BigInteger(1, messageDigest);
+        String hashtext = number.toString(16);
+
+        while (hashtext.length() < 32) {
+            hashtext = "0" + hashtext;
+        }
+        return hashtext;
+    } catch (NoSuchAlgorithmException e) {
+        throw new RuntimeException(e);
+    }
+ }
     
 }

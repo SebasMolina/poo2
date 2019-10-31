@@ -1,5 +1,5 @@
 
-package com.integrador.nyandelivery;
+package modelo;
 
 
 public class Comprobante {

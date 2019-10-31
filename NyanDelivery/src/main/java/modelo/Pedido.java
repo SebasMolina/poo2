@@ -1,8 +1,11 @@
 
-package com.integrador.nyandelivery;
+package modelo;
 
 import java.util.ArrayList;
-
+/**
+ * 
+ * 
+ */
 public class Pedido {
     
     private int id;

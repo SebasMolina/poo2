@@ -1,8 +1,11 @@
 
-package com.integrador.nyandelivery;
+package modelo;
 
 import java.util.ArrayList;
-
+/** Clase para el usuario que va a pedir productos.
+ * 
+ * 
+ */
 public class Usuario extends Persona{
     
     private String nombreUsuario;
@@ -83,14 +86,6 @@ public class Usuario extends Persona{
         this.telefono = telefono;
     }
 
-/** Agrega una opinion al proveedor de productos.
- * Debe especificar una valoracion y una descripcion.
- * @return una opinion
- */    
-    public Opinion agregarOpinion(){
-        Opinion unaOpinion = new Opinion();
-        
-        return unaOpinion;
-    }
+
     
 }
