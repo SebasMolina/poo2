@@ -9,7 +9,7 @@ public class Opinion {
     private String descripcion;
 
 /** Constructor por defecto.
- * 
+ *  
  */    
     public Opinion() {
     }
