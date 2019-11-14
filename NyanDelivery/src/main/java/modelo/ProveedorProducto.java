@@ -77,13 +77,6 @@ public class ProveedorProducto extends Persona{
     public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
     }
-/** Obtener listado de productos.
- * 
- * @return (lista productos)
- */
-    public ArrayList<Producto> getProductos() {
-        return productos;
-    }
 /**Obtener un horario de inicio.
  * 
  * @return (horario de inicio)
@@ -112,16 +105,46 @@ public class ProveedorProducto extends Persona{
     public void setHoraCierre(LocalTime horaFin) {
         this.horaCierre = horaFin;
     }
-
+/** Obtener listado de productos.
+ * 
+ * @return (lista productos)
+ */
+    public ArrayList<Producto> getProductos() {
+        return productos;
+    }
+/** Obtener lista de opiniones.
+ * 
+ * @return lista opiniones
+ */
     public ArrayList<Opinion> getOpiniones() {
         return opiniones;
     }
-    
+/** Agregar un nuevo producto.
+ * 
+ * @param producto 
+ */
     public void AgregarProducto(Producto producto){
         this.productos.add(producto);
     }
-
+/** Eliminar un producto.
+ * 
+ * @param producto 
+ */
     public void eliminarProducto(Producto producto){
         this.productos.remove(producto);
+    }
+/** Agregar una nueva opinion.
+ * 
+ * @param opinion 
+ */
+    public void AgregarOpinion(Opinion opinion){
+        this.opiniones.add(opinion);
+    }
+/** Eliminar una opinion.
+ * 
+ * @param opinion 
+ */
+    private void eliminarOpinion(Opinion opinion){
+         this.opiniones.remove(opinion);
     }
 }
