@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package usuario.controlador;
-import modelo.RepositorioUsuario;
-import modelo.UsuarioNoEncontradaExcepcion;
+package Usuario;
+import usuario.RepositorioUsuario;
+import usuario.UsuarioNoEncontradaExcepcion;
 import io.javalin.http.Context;
 import java.sql.SQLException;
 

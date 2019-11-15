@@ -1,6 +1,7 @@
 
 package modelo;
 
+import usuario.Usuario;
 import java.time.LocalTime;
 
 

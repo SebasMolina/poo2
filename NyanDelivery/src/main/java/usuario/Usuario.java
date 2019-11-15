@@ -1,7 +1,9 @@
 
-package modelo;
+package usuario;
 
 import java.util.ArrayList;
+import modelo.Direccion;
+import modelo.Persona;
 /** Clase para el usuario que va a pedir productos.
  * 
  * 
