@@ -2,6 +2,7 @@
 package modelo;
 
 
+import producto.Producto;
 import java.time.LocalTime;
 import java.util.ArrayList;
 /** Es la clase para el comercio.

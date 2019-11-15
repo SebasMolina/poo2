@@ -1,5 +1,5 @@
 
-package modelo;
+package ingrediente;
 
 /** ingrediente: se debe especificar el nombre y la cantidad.
  * 

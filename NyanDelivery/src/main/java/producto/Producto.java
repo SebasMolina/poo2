@@ -1,7 +1,9 @@
 
-package modelo;
+package producto;
 
+import ingrediente.Ingrediente;
 import java.util.ArrayList;
+import modelo.ProveedorProducto;
 
 public class Producto {
     private int id;

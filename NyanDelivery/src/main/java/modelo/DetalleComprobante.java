@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import pedido.Pedido;
 import java.util.ArrayList;
 
 
