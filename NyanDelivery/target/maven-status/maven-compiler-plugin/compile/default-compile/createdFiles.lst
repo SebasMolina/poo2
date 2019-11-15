@@ -1,24 +1,14 @@
-<<<<<<< HEAD
 modelo\Opinion.class
-proveedorproducto\ProveedorNoEncontradoExcepcion.class
 proveedorproducto\ProveedorProducto.class
-usuario\UsuarioNoEncontradoExcepcion.class
-usuario\Usuario.class
-modelo\Ingrediente.class
 proveedorproducto\RepositorioProveedorProducto.class
 modelo\Comprobante.class
-usuario\UsuarioControlador.class
-modelo\Pedido.class
-modelo\Persona.class
 proveedorproducto\ProveedorControlador.class
-modelo\Producto.class
-sistema\Servidor.class
 modelo\DetalleComprobante.class
-modelo\Direccion.class
 usuario\RepositorioUsuario.class
-=======
-usuario/RepositorioUsuario.class
-Usuario/UsuarioControlador.class
-usuario/UsuarioNoEncontradaExcepcion.class
-usuario/Usuario.class
->>>>>>> 5d167680587d211401a8ce7726235a57a4d7666c
+proveedorproducto\ProveedorNoEncontradoExcepcion.class
+usuario\UsuarioNoEncontradoExcepcion.class
+usuario\Usuario.class
+usuario\UsuarioControlador.class
+modelo\Persona.class
+sistema\Servidor.class
+modelo\Direccion.class

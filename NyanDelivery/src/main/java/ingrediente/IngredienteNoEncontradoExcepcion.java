@@ -9,6 +9,6 @@ package ingrediente;
  *
  * @author sebas
  */
-public class IngredienteNoEncontradoExcepcion {
+public class IngredienteNoEncontradoExcepcion extends Exception {
     
 }

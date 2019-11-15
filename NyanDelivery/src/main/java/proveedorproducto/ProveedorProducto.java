@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import modelo.Direccion;
 import modelo.Opinion;
 import modelo.Persona;
-import modelo.Producto;
+
 /** Es la clase para el comercio.
  * 
  * 
