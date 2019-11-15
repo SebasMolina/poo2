@@ -26,7 +26,7 @@ public class RepositorioUsuario {
     public RepositorioUsuario(Connection connection) throws SQLException {
         this.conexion = connection;
         var consulta = connection.createStatement();
-        consulta.execute("CREATE TABLE IF NOT EXISTS personas (identificador INTEGER PRIMARY KEY AUTOINCREMENT, nombres TEXT, apellidos TEXT)");
+        consulta.execute("CREATE TABLE IF NOT EXISTS usuarios (identificador SERIAL PRIMARY KEY , nombres TEXT, apellidos TEXT)");
         consulta.close();
     }
 

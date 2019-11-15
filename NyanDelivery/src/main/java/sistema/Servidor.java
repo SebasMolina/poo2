@@ -21,11 +21,10 @@ public class Servidor {
 
     public static void main(String[] args) throws SQLException {
         
-        String url = "jdbc:posgresql://localhost:5432/nyamdelivery";
+        var url = "jdbc:postgresql://localhost:5432/nyamdelivery";
         Properties props = new Properties();
         props.setProperty("user","postgres");
-        props.setProperty("password","37704997");
-        props.setProperty("ssl","true");
+        props.setProperty("password","ax37704997");
         var conexion = DriverManager.getConnection(url,props);
         var RepositorioUsuario = new RepositorioUsuario(conexion);
         var UsuarioControlador = new UsuarioControlador(RepositorioUsuario);
