@@ -2,6 +2,7 @@
 package proveedorproducto;
 
 
+import producto.Producto;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import modelo.Direccion;

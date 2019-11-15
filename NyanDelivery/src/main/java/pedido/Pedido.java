@@ -1,7 +1,8 @@
 
-package modelo;
+package pedido;
 
 import java.util.ArrayList;
+import producto.Producto;
 /**
  * 
  * 

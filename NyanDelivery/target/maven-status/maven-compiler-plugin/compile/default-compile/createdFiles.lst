@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 modelo\Opinion.class
 proveedorproducto\ProveedorNoEncontradoExcepcion.class
 proveedorproducto\ProveedorProducto.class
@@ -15,3 +16,9 @@ sistema\Servidor.class
 modelo\DetalleComprobante.class
 modelo\Direccion.class
 usuario\RepositorioUsuario.class
+=======
+usuario/RepositorioUsuario.class
+Usuario/UsuarioControlador.class
+usuario/UsuarioNoEncontradaExcepcion.class
+usuario/Usuario.class
+>>>>>>> 5d167680587d211401a8ce7726235a57a4d7666c
