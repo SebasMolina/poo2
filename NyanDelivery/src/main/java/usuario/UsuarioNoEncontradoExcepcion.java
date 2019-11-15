@@ -9,6 +9,6 @@ package usuario;
  *
  * @author Axel
  */
-public class UsuarioNoEncontradaExcepcion extends Exception {
+public class UsuarioNoEncontradoExcepcion extends Exception {
     
 }

@@ -5,7 +5,7 @@
  */
 package Usuario;
 import usuario.RepositorioUsuario;
-import usuario.UsuarioNoEncontradaExcepcion;
+import usuario.UsuarioNoEncontradoExcepcion;
 import io.javalin.http.Context;
 import java.sql.SQLException;
 
@@ -36,12 +36,12 @@ public class UsuarioControlador {
         ctx.status(201);
     }
 
-    public void borrar(Context ctx) throws SQLException, UsuarioNoEncontradaExcepcion {
+    public void borrar(Context ctx) throws SQLException, UsuarioNoEncontradoExcepcion {
         RepositorioUsuario.borrar(RepositorioUsuario.obtener(ctx.pathParam("identificador", Integer.class).get()));
         ctx.status(204);
     }
 
-    public void modificar(Context ctx) throws SQLException, UsuarioNoEncontradaExcepcion {
+    public void modificar(Context ctx) throws SQLException, UsuarioNoEncontradoExcepcion {
         var usuario = RepositorioUsuario.obtener(ctx.pathParam("identificador", Integer.class).get());
         // usando un formulario
         usuario.setNombreUsuario(ctx.formParam("nombres", String.class).get());

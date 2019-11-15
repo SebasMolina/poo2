@@ -1,6 +1,7 @@
 
 package modelo;
 
+import proveedorproducto.ProveedorProducto;
 import java.util.ArrayList;
 
 public class Producto {

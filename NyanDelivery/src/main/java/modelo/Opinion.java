@@ -1,5 +1,7 @@
 package modelo;
 
+import proveedorproducto.ProveedorProducto;
+
 public class Opinion {
     private int id;
     private ProveedorProducto proveedor;

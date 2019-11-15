@@ -3,40 +3,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package usuario;
-
+package proveedorproducto;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  *
  * @author Axel
- */ 
-//import NyanDelivery.SeurcePackages.modelo.Usuario;
-
-/**
- *
- * @author CM
  */
-public class RepositorioUsuario {
+public class RepositorioProveedorProducto {
     private final Connection conexion;
 
-    public RepositorioUsuario(Connection connection) throws SQLException {
+    public RepositorioProveedorProducto(Connection connection) throws SQLException {
         this.conexion = connection;
         var consulta = connection.createStatement();
-        consulta.execute("CREATE TABLE IF NOT EXISTS usuarios (identificador SERIAL PRIMARY KEY , nombres TEXT, apellidos TEXT)");
+        consulta.execute("CREATE TABLE IF NOT EXISTS proveedorproducto (identificador SERIAL PRIMARY KEY , nombres TEXT, apellidos TEXT)");
         consulta.close();
     }
 
-    public List<Usuario> listar() throws SQLException {
-        var usuario = new ArrayList<Usuario>();
+    public List<ProveedorProducto> listar() throws SQLException {
+        var proveedorproducto = new ArrayList<ProveedorProducto>();
         var consulta = conexion.createStatement();
         var resultado = consulta.executeQuery("SELECT identificador, nombres, apellidos FROM personas");
         while (resultado.next()) {
-            usuario.add(
-                new Usuario(
+            proveedorproducto.add(
+                new ProveedorProducto(
                     resultado.getInt("identificador"),
                     resultado.getString("nombres"),
                     resultado.getString("apellidos")
@@ -45,22 +37,22 @@ public class RepositorioUsuario {
         }
         resultado.close();
         consulta.close();
-        return usuario;
+        return proveedorproducto;
     }
 
-    public Usuario obtener(int identificador) throws SQLException, UsuarioNoEncontradoExcepcion {
+    public ProveedorProducto obtener(int identificador) throws SQLException, ProveedorNoEncontradoExcepcion {
         var consulta = conexion.prepareStatement("SELECT identificador, nombres, apellidos FROM personas WHERE identificador = ?");
         consulta.setInt(1, identificador);
         var resultado = consulta.executeQuery();
         try {
             if (resultado.next()) {
-                return new Usuario(
+                return new ProveedorProducto(
                         resultado.getInt("identificador"),
                         resultado.getString("nombres"),
                         resultado.getString("apellidos")
                 );
             } else {
-                throw new UsuarioNoEncontradoExcepcion();
+                throw new ProveedorNoEncontradoExcepcion();
             }
         }
         finally {
@@ -77,24 +69,24 @@ public class RepositorioUsuario {
         consulta.close();
     }
 
-    public void modificar(Usuario usuario) throws SQLException, UsuarioNoEncontradoExcepcion {
+    public void modificar(ProveedorProducto proveedorproducto) throws SQLException, ProveedorNoEncontradoExcepcion {
         var consulta = conexion.prepareStatement("UPDATE personas SET nombres = ?, apellidos = ? WHERE identificador = ?");
-        consulta.setString(1, usuario.getNombreUsuario());
-        consulta.setString(2, usuario.getApellido());
-        consulta.setInt(3, usuario.getId());
+        consulta.setString(1, proveedorproducto.getNombre());
+        consulta.setString(2, proveedorproducto.getApellido());
+        consulta.setInt(3, proveedorproducto.getId());
         try {
-            if (consulta.executeUpdate() == 0) throw new UsuarioNoEncontradoExcepcion();
+            if (consulta.executeUpdate() == 0) throw new ProveedorNoEncontradoExcepcion();
         }
         finally {
             consulta.close();
         }
     }
 
-    public void borrar(Usuario usuario) throws SQLException, UsuarioNoEncontradoExcepcion {
+    public void borrar(ProveedorProducto proveedorproducto) throws SQLException, ProveedorNoEncontradoExcepcion {
         var consulta = conexion.prepareStatement("DELETE FROM personas WHERE identificador = ?");
-        consulta.setInt(1, usuario.getId());
+        consulta.setInt(1, proveedorproducto.getId());
        try {
-            if (consulta.executeUpdate() == 0) throw new UsuarioNoEncontradoExcepcion();
+            if (consulta.executeUpdate() == 0) throw new ProveedorNoEncontradoExcepcion();
         }
         finally {
             consulta.close();

@@ -10,10 +10,13 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import Usuario.UsuarioControlador;
 import usuario.RepositorioUsuario;
-import usuario.UsuarioNoEncontradaExcepcion;
+import usuario.UsuarioNoEncontradoExcepcion;
 import static io.javalin.apibuilder.ApiBuilder.*;
 import io.javalin.core.event.EventListener;
 import java.util.Properties;
+import proveedorproducto.ProveedorControlador;
+import proveedorproducto.ProveedorNoEncontradoExcepcion;
+import proveedorproducto.RepositorioProveedorProducto;
 
 
 
@@ -28,6 +31,8 @@ public class Servidor {
         var conexion = DriverManager.getConnection(url,props);
         var RepositorioUsuario = new RepositorioUsuario(conexion);
         var UsuarioControlador = new UsuarioControlador(RepositorioUsuario);
+        var RepositorioProveedorProducto = new RepositorioProveedorProducto(conexion);
+        var ProveedorControlador = new ProveedorControlador(RepositorioProveedorProducto);
 
         Javalin.create()
         .events((EventListener event) -> {
@@ -42,8 +47,17 @@ public class Servidor {
                     put(UsuarioControlador::modificar);
                 });
             });
+            path("ProveedorProducto", () -> {
+                get(ProveedorControlador::listar);
+                post(ProveedorControlador::crear);
+                path(":identificador", () -> {
+                    delete(ProveedorControlador::borrar);
+                    put(ProveedorControlador::modificar);
+                });
+            });
         })
-        .exception(UsuarioNoEncontradaExcepcion.class, (e, ctx) -> { ctx.status(404); })
+        .exception(UsuarioNoEncontradoExcepcion.class, (e, ctx) -> { ctx.status(404); })
+        .exception(ProveedorNoEncontradoExcepcion.class, (e, ctx) -> { ctx.status(404); })
         .start(7000);
     }
 }

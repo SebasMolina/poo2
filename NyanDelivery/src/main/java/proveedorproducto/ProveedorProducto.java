@@ -1,9 +1,13 @@
 
-package modelo;
+package proveedorproducto;
 
 
 import java.time.LocalTime;
 import java.util.ArrayList;
+import modelo.Direccion;
+import modelo.Opinion;
+import modelo.Persona;
+import modelo.Producto;
 /** Es la clase para el comercio.
  * 
  * 
@@ -34,6 +38,10 @@ public class ProveedorProducto extends Persona{
         super.setApellido(apellido);
         this.productos = new ArrayList<>();
         this.opiniones = new ArrayList<>();
+    }
+
+    ProveedorProducto(int aInt, String string, String string0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 /** Obtener la ciudad.
  * 
