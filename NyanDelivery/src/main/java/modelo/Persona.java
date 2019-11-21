@@ -1,12 +1,11 @@
 
 package modelo;
 
-import java.io.UnsupportedEncodingException;
+
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /** Clase abstracta persona.
  * Sirve para guardar el id, mail, contraseña, nombre y apellido.

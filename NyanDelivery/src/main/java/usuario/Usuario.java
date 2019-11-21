@@ -39,9 +39,10 @@ public class Usuario extends Persona{
         this.direcciones = new ArrayList<>();
     }
 
-    Usuario(int aInt, String string, String string0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   public Usuario(int aInt, String nombre, String apellido) {
+        super.setNombre(nombre);
+        super.setApellido(apellido);
+   }
 /** agregar una direccion.
  * @param direccion 
  * agrega una direccion al usuario.
