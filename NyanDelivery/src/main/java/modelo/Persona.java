@@ -17,6 +17,8 @@ public abstract class Persona {
     private String contraseña;
     private String nombre;
     private String apellido;
+    private Direccion direccion;
+    private int tipoPersona;
 
     /**Constructor por defecto.
      * 
@@ -60,25 +62,54 @@ public abstract class Persona {
     public String getNombre() {
         return nombre;
     }
-    /** Agregar un nombre.
+/** Agregar un nombre.
      * @param nombre 
-     */
+*/
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    /** Obtener apellido.
+/** Obtener apellido.
      * @return (String apellido)
-     */
+*/
     public String getApellido() {
         return apellido;
     }
-    /**Agregar un apellido.
+/**Agregar un apellido.
      * @param apellido 
-     */
+*/
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+/** Obtener la direccion.
+ * 
+ * @return Direccion
+ */
+    public Direccion getDireccion() {
+        return direccion;
+    }
+/** Agregar una direccion.
+ * 
+ * @param direccion 
+ */
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
+    }
+/** Obtener el tipo de persona.
+ * 
+ * @return 
+ */
+    public int getTipoPersona() {
+        return tipoPersona;
+    }
+/** Agregar que tipo de persona es.
+ * 
+ * @param tipoPersona 
+ */
+    public void setTipoPersona(int tipoPersona) {
+        this.tipoPersona = tipoPersona;
+    }
 
+    
     private String getMD5(String clave) {
     try {
         MessageDigest md = MessageDigest.getInstance("MD5");

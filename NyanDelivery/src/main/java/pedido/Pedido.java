@@ -3,6 +3,7 @@ package pedido;
 
 import java.util.ArrayList;
 import producto.Producto;
+import usuario.Usuario;
 /**
  * 
  * 
@@ -11,6 +12,7 @@ public class Pedido {
     
     private int id;
     private ArrayList<Producto> productos;
+    private Usuario cliente;
     private String notas;
     
 /** Constructor por defecto.
@@ -24,7 +26,8 @@ public class Pedido {
  * @param productos
  * @param notas 
  */
-    public Pedido(ArrayList<Producto> productos, String notas) {
+    public Pedido(Usuario cliente, ArrayList<Producto> productos, String notas) {
+        this.cliente = cliente;
         this.productos = productos;
         this.notas = notas;
     }
@@ -69,6 +72,21 @@ public class Pedido {
  */    
     public void eliminarProductos(Producto producto){
         this.productos.remove(producto);
+    }
+/** Obtener el cliente.
+ * que hace el pedido
+ * 
+ * @return 
+ */
+    public Usuario getCliente() {
+        return cliente;
+    }
+/** Agregar el cliente.
+ * 
+ * @param cliente 
+ */
+    public void setCliente(Usuario cliente) {
+        this.cliente = cliente;
     }
     
 }

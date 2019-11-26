@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Usuario;
+package usuario;
+
 import usuario.RepositorioUsuario;
 import usuario.UsuarioNoEncontradoExcepcion;
 import io.javalin.http.Context;

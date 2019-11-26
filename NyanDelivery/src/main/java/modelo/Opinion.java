@@ -1,9 +1,11 @@
 package modelo;
 
 import proveedorproducto.ProveedorProducto;
+import usuario.Usuario;
 
 public class Opinion {
     private int id;
+    private Usuario usuario;
     private ProveedorProducto proveedor;
     private int valoracion;
     private String descripcion;
@@ -19,7 +21,8 @@ public class Opinion {
  * @param valoracion
  * @param descripcion 
  */
-    public Opinion(ProveedorProducto proveedor, int valoracion, String descripcion) {
+    public Opinion(Usuario usuario,ProveedorProducto proveedor, int valoracion, String descripcion) {
+        this.usuario = usuario;
         this.proveedor = proveedor;
         this.valoracion = valoracion;
         this.descripcion = descripcion;
@@ -45,6 +48,21 @@ public class Opinion {
     public void setProveedor(ProveedorProducto proveedor) {
         this.proveedor = proveedor;
     }
+/** Obtener usuario que hizo la opinion.
+ * 
+ * @return 
+ */
+    public Usuario getUsuario() {
+        return usuario;
+    }
+/** Agregar usuario que hace la opinion.
+ * 
+ * @param usuario 
+ */
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+    
 /** Obtener la valoracion.
  * Valor máximo 5. Valor minimo 1.
  * @return (int valoracion)

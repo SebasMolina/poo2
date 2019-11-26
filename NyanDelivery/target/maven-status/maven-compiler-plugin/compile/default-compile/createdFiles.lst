@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 modelo\Opinion.class
 proveedorproducto\ProveedorProducto.class
 pedido\Pedido.class
@@ -24,3 +25,5 @@ pedido\RepositorioPedido.class
 Usuario\UsuarioControlador.class
 sistema\Servidor.class
 modelo\Direccion.class
+=======
+>>>>>>> Stashed changes
