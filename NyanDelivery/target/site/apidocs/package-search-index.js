@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"comprobante"},{"l":"ingrediente"},{"l":"modelo"},{"l":"pedido"},{"l":"producto"},{"l":"proveedorproducto"},{"l":"sistema"},{"l":"usuario"}]

@@ -1,0 +1,1 @@
+/usr/lib/jvm/java-10-oracle/bin/javadoc @options @packages

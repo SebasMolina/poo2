@@ -11,34 +11,34 @@ import modelo.Persona;
 public class Usuario extends Persona{
     
     private String nombreUsuario;
-    private ArrayList<Direccion> direcciones;
     private String telefono;
 /**Constructor por defecto.
  * 
  */
     public Usuario() {
-        this.direcciones = new ArrayList<>();
-        
+        super.setTipoPersona(1);    //Sirve para diferenciar.  
     }
-/**Contructor.
- * Parametros:
+/** * Contructor.Parametros:
  * @param mail
  * @param contraseña
  * @param nombre
  * @param apellido
  * @param nombreUsuario
  * @param telefono
+ * @param direccion
  */
-    public Usuario(String mail, String contraseña, String nombre, String apellido, String nombreUsuario, String telefono) {
+    public Usuario(String mail, String contraseña, String nombre, String apellido, String nombreUsuario, String telefono, Direccion direccion) {
+        super.setTipoPersona(1);
         super.setMail(mail);
         super.setContraseña(contraseña);
         super.setNombre(nombre);
         super.setApellido(apellido);
         this.telefono = telefono;
         this.nombreUsuario = nombreUsuario;
-        this.direcciones = new ArrayList<>();
+        super.setDireccion(direccion);
     }
 
+<<<<<<< Updated upstream
    public Usuario(int aInt, String nombre, String apellido) {
         super.setNombre(nombre);
         super.setApellido(apellido);
@@ -57,6 +57,12 @@ public class Usuario extends Persona{
     public void eliminarDireccion(Direccion direccion){
         this.direcciones.remove(direccion);
     }
+=======
+    Usuario(int aInt, String string, String string0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+>>>>>>> Stashed changes
 /** Obtener el nombre de usuario.
  * 
  * @return (String nombreUsuario)
@@ -70,13 +76,6 @@ public class Usuario extends Persona{
  */
     public void setNombreUsuario(String nombreUsuario) {
         this.nombreUsuario = nombreUsuario;
-    }
-/** Obtener las direcciones.
- * 
- * @return 
- */
-    public ArrayList<Direccion> getDirecciones() {
-        return direcciones;
     }
 /** Obtener telefono.
  * 

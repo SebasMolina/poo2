@@ -29,6 +29,10 @@ public class Ingrediente {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+/** Obtener el id.
+ * 
+ * @return 
+ */
     public int getId() {
         return id;
     }

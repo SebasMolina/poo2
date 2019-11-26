@@ -18,21 +18,22 @@ public class ProveedorProducto extends Persona{
     
     private String Ciudad;
     private String razonSocial;
-    private Direccion direccion;
     private ArrayList<Producto> productos;
     private LocalTime horaInicio;
     private LocalTime horaCierre;
     private ArrayList<Opinion> opiniones;
     
-    /** Constructor por defecto.
+/** Constructor por defecto.
      * 
-     */
+*/
     public ProveedorProducto() {
+        super.setTipoPersona(2);
         this.productos = new ArrayList<>();
         this.opiniones = new ArrayList<>();
     }
     
     public ProveedorProducto(String mail, String contraseña, String nombre, String apellido) {
+        super.setTipoPersona(2);
         super.setMail(mail);
         super.setContraseña(contraseña);
         super.setNombre(nombre);
@@ -44,6 +45,7 @@ public class ProveedorProducto extends Persona{
     ProveedorProducto(int aInt, String string, String string0) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
 /** Obtener la ciudad.
  * 
  * @return (String ciudad)
@@ -71,20 +73,6 @@ public class ProveedorProducto extends Persona{
  */
     public void setRazonSocial(String razonSocial) {
         this.razonSocial = razonSocial;
-    }
-/** Obtener direccion.
- * 
- * @return (direccion)
- */
-    public Direccion getDireccion() {
-        return direccion;
-    }
-/** Agregar una direccion.
- * 
- * @param direccion 
- */
-    public void setDireccion(Direccion direccion) {
-        this.direccion = direccion;
     }
 /**Obtener un horario de inicio.
  * 
