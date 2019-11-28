@@ -38,7 +38,6 @@ public class Usuario extends Persona{
         super.setDireccion(direccion);
     }
 
-<<<<<<< Updated upstream
    public Usuario(int aInt, String nombre, String apellido) {
         super.setNombre(nombre);
         super.setApellido(apellido);
@@ -47,22 +46,8 @@ public class Usuario extends Persona{
  * @param direccion 
  * agrega una direccion al usuario.
  */
-    public void agregarDireccion(Direccion direccion){
-        this.direcciones.add(direccion);
-    }
-/** eliminar una direccion.
- * @param direccion
- * elimina una direccion al usuario.
- */
-    public void eliminarDireccion(Direccion direccion){
-        this.direcciones.remove(direccion);
-    }
-=======
-    Usuario(int aInt, String string, String string0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
->>>>>>> Stashed changes
+
 /** Obtener el nombre de usuario.
  * 
  * @return (String nombreUsuario)
