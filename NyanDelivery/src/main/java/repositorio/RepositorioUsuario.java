@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package usuario;
+package repositorio;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import modelo.Usuario;
+import excepcion.UsuarioNoEncontradoExcepcion;
 
 /**
  *
@@ -70,7 +72,7 @@ public class RepositorioUsuario {
     }
 
     public void crear(String nombres, String apellidos) throws SQLException {
-        try (java.sql.PreparedStatement consulta = conexion.prepareStatement("INSERT INTO usuarios(nombres, apellidos) VALUES (?, ?)")) {
+        try (java.sql.PreparedStatement consulta = conexion.prepareStatement("INSERT INTO usuario(nombres, apellidos) VALUES (?, ?)")) {
             consulta.setString(1, nombres);
             consulta.setString(2, apellidos);
             consulta.executeUpdate();
@@ -78,7 +80,7 @@ public class RepositorioUsuario {
     }
 
     public void modificar(Usuario usuario) throws SQLException, UsuarioNoEncontradoExcepcion {
-        var consulta = conexion.prepareStatement("UPDATE usuarios SET nombres = ?, apellidos = ? WHERE identificador = ?");
+        var consulta = conexion.prepareStatement("UPDATE usuario SET nombres = ?, apellidos = ? WHERE identificador = ?");
         consulta.setString(1, usuario.getNombreUsuario());
         consulta.setString(2, usuario.getApellido());
         consulta.setInt(3, usuario.getId());

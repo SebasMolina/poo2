@@ -1,8 +1,7 @@
 
-package producto;
+package modelo;
 
-import ingrediente.Ingrediente;
-import proveedorproducto.ProveedorProducto;
+import modelo.ProveedorProducto;
 import java.util.ArrayList;
 
 public class Producto {

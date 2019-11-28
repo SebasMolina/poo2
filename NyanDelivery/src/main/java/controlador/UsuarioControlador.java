@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package usuario;
+package controlador;
 
-import usuario.RepositorioUsuario;
-import usuario.UsuarioNoEncontradoExcepcion;
+import repositorio.RepositorioUsuario;
+import excepcion.UsuarioNoEncontradoExcepcion;
 import io.javalin.http.Context;
 import java.sql.SQLException;
+import excepcion.UsuarioNoEncontradoExcepcion;
 
 /**
  *

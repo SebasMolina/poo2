@@ -1,5 +1,5 @@
 
-package usuario;
+package modelo;
 
 import java.util.ArrayList;
 import modelo.Direccion;

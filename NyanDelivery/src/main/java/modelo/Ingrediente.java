@@ -1,5 +1,5 @@
 
-package ingrediente;
+package modelo;
 
 /** ingrediente: se debe especificar el nombre y la cantidad.
  * 
@@ -25,7 +25,7 @@ public class Ingrediente {
         this.cantidad = cantidad;
     }
 
-    Ingrediente(int aInt, String string, String string0) {
+    public Ingrediente(int aInt, String string, String string0) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

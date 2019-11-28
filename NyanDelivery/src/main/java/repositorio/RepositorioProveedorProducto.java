@@ -3,11 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package proveedorproducto;
+package repositorio;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import excepcion.ProveedorNoEncontradoExcepcion;
+import modelo.ProveedorProducto;
 /**
  *
  * @author Axel
@@ -18,20 +20,20 @@ public class RepositorioProveedorProducto {
     public RepositorioProveedorProducto(Connection connection) throws SQLException {
         this.conexion = connection;
         var consulta = connection.createStatement();
-        consulta.execute("CREATE TABLE IF NOT EXISTS proveedorproducto (identificador SERIAL PRIMARY KEY , nombres TEXT, apellidos TEXT)");
+        consulta.execute("CREATE TABLE IF NOT EXISTS proveedor (identificador SERIAL PRIMARY KEY , nombres TEXT, apellidos TEXT)");
         consulta.close();
     }
 
     public List<ProveedorProducto> listar() throws SQLException {
         var proveedorproducto = new ArrayList<ProveedorProducto>();
         var consulta = conexion.createStatement();
-        var resultado = consulta.executeQuery("SELECT identificador, nombres, apellidos FROM personas");
+        var resultado = consulta.executeQuery("SELECT identificador, nombres, apellidos FROM proveedor");
         while (resultado.next()) {
             proveedorproducto.add(
                 new ProveedorProducto(
                     resultado.getInt("identificador"),
-                    resultado.getString("nombres"),
-                    resultado.getString("apellidos")
+                    resultado.getString("nombre"),
+                    resultado.getString("apellido")
                 )
             );
         }

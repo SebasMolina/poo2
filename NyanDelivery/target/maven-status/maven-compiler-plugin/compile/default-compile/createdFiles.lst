@@ -1,15 +1,12 @@
-<<<<<<< Updated upstream
 modelo\Opinion.class
 proveedorproducto\ProveedorProducto.class
 pedido\Pedido.class
 proveedorproducto\RepositorioProveedorProducto.class
-modelo\Comprobante.class
 producto\ProductoNoEncontradaExcepcion.class
 ingrediente\Ingrediente.class
 producto\ProductoControlador.class
 proveedorproducto\ProveedorControlador.class
 ingrediente\RepositorioIngrediente.class
-modelo\DetalleComprobante.class
 ingrediente\IngredienteNoEncontradoExcepcion.class
 pedido\PedidoNoEncontradoExcepcion.class
 proveedorproducto\ProveedorNoEncontradoExcepcion.class
@@ -25,5 +22,3 @@ pedido\RepositorioPedido.class
 Usuario\UsuarioControlador.class
 sistema\Servidor.class
 modelo\Direccion.class
-=======
->>>>>>> Stashed changes

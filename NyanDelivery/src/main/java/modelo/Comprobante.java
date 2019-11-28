@@ -1,10 +1,9 @@
 
-package comprobante;
+package modelo;
 
 import java.time.LocalTime;
-import comprobante.DetalleComprobante;
-import proveedorproducto.ProveedorProducto;
-import usuario.Usuario;
+import modelo.ProveedorProducto;
+import modelo.Usuario;
 
 
 public class Comprobante {

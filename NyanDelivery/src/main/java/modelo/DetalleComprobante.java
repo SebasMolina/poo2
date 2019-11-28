@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package comprobante;
+package modelo;
 
-import pedido.Pedido;
-import producto.Producto;
+import modelo.Pedido;
+import modelo.Producto;
 
 
 public class DetalleComprobante {

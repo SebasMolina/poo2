@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ingrediente;
+package controlador;
 
+import excepcion.IngredienteNoEncontradoExcepcion;
+import repositorio.RepositorioIngrediente;
 import io.javalin.http.Context;
 import java.sql.SQLException;
 

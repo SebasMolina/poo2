@@ -1,9 +1,9 @@
 
-package pedido;
+package modelo;
 
 import java.util.ArrayList;
-import producto.Producto;
-import usuario.Usuario;
+import modelo.Producto;
+import modelo.Usuario;
 /**
  * 
  * 

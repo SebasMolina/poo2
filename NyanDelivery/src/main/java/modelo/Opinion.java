@@ -1,8 +1,5 @@
 package modelo;
 
-import proveedorproducto.ProveedorProducto;
-import usuario.Usuario;
-
 public class Opinion {
     private int id;
     private Usuario usuario;

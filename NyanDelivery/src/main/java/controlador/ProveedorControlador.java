@@ -3,16 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package proveedorproducto;
+package controlador;
 
 /**
  *
  * @author Axel
  */
-import proveedorproducto.RepositorioProveedorProducto;
-import proveedorproducto.ProveedorNoEncontradoExcepcion;
+import repositorio.RepositorioProveedorProducto;
+import excepcion.ProveedorNoEncontradoExcepcion;
 import io.javalin.http.Context;
 import java.sql.SQLException;
+import excepcion.ProveedorNoEncontradoExcepcion;
 
 /**
  *
