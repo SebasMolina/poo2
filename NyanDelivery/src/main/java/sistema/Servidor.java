@@ -45,11 +45,18 @@ public class Servidor {
         var IngredienteControlador = new IngredienteControlador(RepositorioIngrediente);
         var RepositorioComprobante = new RepositorioComprobante(conexion);
         
-
-        Javalin.create()
+        
+        Javalin.create(config -> {
+            config.defaultContentType = "application/json";
+            config.addStaticFiles("/public");
+            config.enableCorsForAllOrigins();
+            config.addSinglePageRoot("/", "/public/index.html");
+        })
+      
         .events((EventListener event) -> {
             event.serverStopped(() -> { conexion.close(); });
         })
+        
         .routes(() -> {
             path("usuario", () -> {
                 get(UsuarioControlador::listar);

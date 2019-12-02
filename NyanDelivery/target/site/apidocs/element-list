@@ -1,8 +1,5 @@
-comprobante
-ingrediente
+controlador
+excepcion
 modelo
-pedido
-producto
-proveedorproducto
+repositorio
 sistema
-usuario

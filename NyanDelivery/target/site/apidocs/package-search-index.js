@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"comprobante"},{"l":"ingrediente"},{"l":"modelo"},{"l":"pedido"},{"l":"producto"},{"l":"proveedorproducto"},{"l":"sistema"},{"l":"usuario"}]
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"controlador"},{"l":"excepcion"},{"l":"modelo"},{"l":"repositorio"},{"l":"sistema"}]

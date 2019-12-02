@@ -28,19 +28,19 @@ public class RepositorioUsuario {
     public RepositorioUsuario(Connection connection) throws SQLException {
         this.conexion = connection;
         var consulta = connection.createStatement();
-        consulta.execute("CREATE TABLE IF NOT EXISTS usuarios (identificador SERIAL PRIMARY KEY , nombres TEXT, apellidos TEXT)");
+        consulta.execute("CREATE TABLE IF NOT EXISTS usuario (usuarioid SERIAL PRIMARY KEY , nombreusuario TEXT, apellidos TEXT)");
         consulta.close();
     }
 
     public List<Usuario> listar() throws SQLException {
         var usuario = new ArrayList<Usuario>();
         var consulta = conexion.createStatement();
-        var resultado = consulta.executeQuery("SELECT identificador, nombres, apellidos FROM usuarios");
+        var resultado = consulta.executeQuery("SELECT usuarioid, nombreusuario, apellidos FROM usuario");
         while (resultado.next()) {
             usuario.add(
                 new Usuario(
-                    resultado.getInt("identificador"),
-                    resultado.getString("nombres"),
+                    resultado.getInt("usuarioid"),
+                    resultado.getString("nombreusuario"),
                     resultado.getString("apellidos")
                 )
             );
@@ -51,14 +51,14 @@ public class RepositorioUsuario {
     }
 
     public Usuario obtener(int identificador) throws SQLException, UsuarioNoEncontradoExcepcion {
-        var consulta = conexion.prepareStatement("SELECT identificador, nombres, apellidos FROM usuarios WHERE identificador = ?");
+        var consulta = conexion.prepareStatement("SELECT usuarioid, nombresusuario, apellidos FROM usuario WHERE identificador = ?");
         consulta.setInt(1, identificador);
         var resultado = consulta.executeQuery();
         try {
             if (resultado.next()) {
                 return new Usuario(
-                        resultado.getInt("identificador"),
-                        resultado.getString("nombres"),
+                        resultado.getInt("usuarioid"),
+                        resultado.getString("nombreusuario"),
                         resultado.getString("apellidos")
                 );
             } else {
@@ -71,19 +71,20 @@ public class RepositorioUsuario {
         }
     }
 
-    public void crear(String nombres, String apellidos) throws SQLException {
-        try (java.sql.PreparedStatement consulta = conexion.prepareStatement("INSERT INTO usuario(nombres, apellidos) VALUES (?, ?)")) {
-            consulta.setString(1, nombres);
+    public void crear(String nombreusuario, String apellidos) throws SQLException {
+        try (java.sql.PreparedStatement consulta = conexion.prepareStatement("INSERT INTO usuario(nombreusuario, apellidos) VALUES (?, ?)")) {
+            consulta.setString(1, nombreusuario);
             consulta.setString(2, apellidos);
             consulta.executeUpdate();
         }
     }
 
     public void modificar(Usuario usuario) throws SQLException, UsuarioNoEncontradoExcepcion {
-        var consulta = conexion.prepareStatement("UPDATE usuario SET nombres = ?, apellidos = ? WHERE identificador = ?");
-        consulta.setString(1, usuario.getNombreUsuario());
-        consulta.setString(2, usuario.getApellido());
-        consulta.setInt(3, usuario.getId());
+        var consulta = conexion.prepareStatement("UPDATE usuario SET nombreusuario = ?, apellidos = ? WHERE usuarioid = ?");
+        consulta.setInt(1, usuario.getId());
+        consulta.setString(2, usuario.getNombreUsuario());
+        consulta.setString(3, usuario.getApellido());
+        
         try {
             if (consulta.executeUpdate() == 0) throw new UsuarioNoEncontradoExcepcion();
         }
@@ -93,7 +94,7 @@ public class RepositorioUsuario {
     }
 
     public void borrar(Usuario usuario) throws SQLException, UsuarioNoEncontradoExcepcion {
-        var consulta = conexion.prepareStatement("DELETE FROM usuarios WHERE identificador = ?");
+        var consulta = conexion.prepareStatement("DELETE FROM usuario WHERE usuarioid = ?");
         consulta.setInt(1, usuario.getId());
        try {
             if (consulta.executeUpdate() == 0) throw new UsuarioNoEncontradoExcepcion();
