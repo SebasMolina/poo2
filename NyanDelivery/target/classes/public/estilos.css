@@ -7,3 +7,11 @@ and open the template in the editor.
     Created on : 2 dic. 2019, 17:56:59
     Author     : Axel
 */
+/* --Header--  */
+.text-center{
+    color:#c7254e;
+}
+.btn{
+    background-color:#c7254e;
+    border-color: #c7254e;
+}
