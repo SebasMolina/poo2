@@ -35,7 +35,7 @@ Nuestro sistema comprende a dos usuarios. El usuario que utiliza la aplicación 
 ## Casos de Uso
 
 ### Diagrama de casos de uso
-![Diagrama casos de uso](dia_casos_uso.png)
+![Diagrama casos de uso](diagramadeclasesv2.png)
 
 ### Actores
 
