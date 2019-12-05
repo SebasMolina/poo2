@@ -35,6 +35,19 @@ public class DetalleComprobante {
     public int getId() {
         return id;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setPedido(Pedido pedido) {
+        this.pedido = pedido;
+    }
+
+    public void setTotal(Double total) {
+        this.total = total;
+    }
+    
     
 /** Calcular el total del pedido.
  * Se multiplica la cantidad por el precio.

@@ -21,6 +21,15 @@ public class Pedido {
     public Pedido() {
         this.productos = new ArrayList<>();
     }
+
+    public Pedido(int id) {
+        this.id = id;
+        this.productos = new ArrayList<>();
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    
 /** Constructor.
  * Parametros:
  * @param productos

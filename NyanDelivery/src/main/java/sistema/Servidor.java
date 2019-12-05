@@ -5,12 +5,14 @@
  */
 package sistema;
 
+import controlador.ComprobanteControlador;
 import excepcion.IngredienteNoEncontradoExcepcion;
 import excepcion.ProveedorNoEncontradoExcepcion;
 import excepcion.UsuarioNoEncontradoExcepcion;
 import controlador.IngredienteControlador;
 import controlador.ProveedorControlador;
 import controlador.UsuarioControlador;
+import excepcion.ComprobanteNoEncontradoExcepcion;
 import repositorio.RepositorioProveedorProducto;
 import repositorio.RepositorioIngrediente;
 import repositorio.RepositorioComprobante;
@@ -29,12 +31,12 @@ public class Servidor {
 
     public static void main(String[] args) throws SQLException {
         
-        var url = "jdbc:postgresql://localhost:5432/nyamdelivery";
+        var url = "jdbc:postgresql://localhost:5432/nyandelivery";
     //CAMBIAR POR CADA BASE DE DATOS.
         Properties props = new Properties();
         props.setProperty("user","postgres");
     //CAMBIAR POR CADA USUARIO DE LA BD.
-        props.setProperty("password","ax37704997");
+        props.setProperty("password","postgres");
     //CAMBIAR POR CADA CONTRASEÑA DE LA BASE DE DATOS
         var conexion = DriverManager.getConnection(url,props);
         var RepositorioUsuario = new RepositorioUsuario(conexion);
@@ -44,6 +46,7 @@ public class Servidor {
         var RepositorioIngrediente = new RepositorioIngrediente(conexion);
         var IngredienteControlador = new IngredienteControlador(RepositorioIngrediente);
         var RepositorioComprobante = new RepositorioComprobante(conexion);
+        var ComprobanteControlador = new ComprobanteControlador(RepositorioComprobante);
         
         
         Javalin.create(config -> {
@@ -85,10 +88,21 @@ public class Servidor {
                     put(IngredienteControlador::modificar);
                 });
             });
+            path("api/v1.0/comprobante", () -> {
+                get(ComprobanteControlador::listar);
+                post(ComprobanteControlador::crear);
+                path(":identificador", () -> {
+                    get(ComprobanteControlador::obtener);
+                });
+                path(":proveedor", () -> {
+                    get(ComprobanteControlador::obtenerPorProveedor);
+                });
+            });
         })
         .exception(UsuarioNoEncontradoExcepcion.class, (e, ctx) -> { ctx.status(404); })
         .exception(ProveedorNoEncontradoExcepcion.class, (e, ctx) -> { ctx.status(404); })
         .exception(IngredienteNoEncontradoExcepcion.class, (e, ctx) -> { ctx.status(404); })
+        .exception(ComprobanteNoEncontradoExcepcion.class, (e, ctx) -> { ctx.status(404); })
         .start(7000);
     }
 }

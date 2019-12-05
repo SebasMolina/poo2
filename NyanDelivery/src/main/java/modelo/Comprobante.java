@@ -25,6 +25,21 @@ public class Comprobante {
         this.cliente = cliente;
         this.proveedor = proveedor;
     }
+    public Comprobante(int comprobanteid, int proveedorid, 
+            int usuarioid, LocalTime hora, int detalleid, Double total, int pedidoid) {
+        this.id = comprobanteid;
+        this.proveedor.setId(proveedorid);
+        this.cliente.setId(usuarioid);
+        this.hora = hora;
+        this.detalle.setId(detalleid);
+        this.detalle.setTotal(total);
+        this.detalle.setPedido(new Pedido(pedidoid));
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
 /** Obtener el id.
  * 
  * @return 
