@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author sebas
+ * @author click
  */
 public class IngredienteControlador {
     private final RepositorioIngrediente RepositorioIngrediente;
@@ -25,15 +25,23 @@ public class IngredienteControlador {
         ctx.json(RepositorioIngrediente.listar());
     }
 
+    public void obtener(Context ctx) throws SQLException, IngredienteNoEncontradoExcepcion {
+        ctx.json(RepositorioIngrediente.obtener(ctx.pathParam("identificador", Integer.class).get()));
+    }
+    
     public void crear(Context ctx) throws SQLException {
         // Usando un formulario
-        RepositorioIngrediente.crear(ctx.formParam("nombres", String.class).get(), ctx.formParam("cantidad", Integer.class ).get());        
+        RepositorioIngrediente.crear(
+        //-----persona
+            ctx.formParam("nombre", String.class).get(), 
+            ctx.formParam("cantidad", int.class).get());
         // Usando JSON        
         /*
         var p = ctx.bodyAsClass(Persona.class);            
         personasRepositorio.crear(p.getNombres(), p.getApellidos());
         */
         ctx.status(201);
+
     }
 
     public void borrar(Context ctx) throws SQLException, IngredienteNoEncontradoExcepcion {
@@ -43,9 +51,9 @@ public class IngredienteControlador {
 
     public void modificar(Context ctx) throws SQLException, IngredienteNoEncontradoExcepcion {
         var proveedorproducto = RepositorioIngrediente.obtener(ctx.pathParam("identificador", Integer.class).get());
-        proveedorproducto.setNombre(ctx.formParam("nombres", String.class).get());
+        proveedorproducto.setNombre(ctx.formParam("nombre", String.class).get());
         proveedorproducto.setCantidad(ctx.formParam("Cantidad", Integer.class).get());
         RepositorioIngrediente.modificar(proveedorproducto);
         ctx.status(204);
-    }
+    }   
 }

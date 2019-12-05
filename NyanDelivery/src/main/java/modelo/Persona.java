@@ -32,6 +32,10 @@ public abstract class Persona {
     public int getId() {
         return id;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 /** Obtener mail.
  * @return (String mail)
  */

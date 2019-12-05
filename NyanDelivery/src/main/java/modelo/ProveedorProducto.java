@@ -3,6 +3,7 @@ package modelo;
 
 
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import modelo.Opinion;
 import modelo.Persona;
@@ -14,8 +15,9 @@ import modelo.Persona;
 public class ProveedorProducto extends Persona{
     
     
-    private String Ciudad;
+    private String ciudad;
     private String razonSocial;
+    private String telefono;
     private ArrayList<Producto> productos;
     private LocalTime horaInicio;
     private LocalTime horaCierre;
@@ -29,20 +31,40 @@ public class ProveedorProducto extends Persona{
         this.productos = new ArrayList<>();
         this.opiniones = new ArrayList<>();
     }
-    
-    public ProveedorProducto(String mail, String contraseña, String nombre, String apellido) {
-        super.setTipoPersona(2);
-        super.setMail(mail);
-        super.setContraseña(contraseña);
+//-------------sirve para crear.    
+    public ProveedorProducto(int proveedorId,String nombre, String apellido,
+            String mail, String contraseña, String razonSocial, String telefono,
+            String ciudad,
+            String calle, int numero, String cp, String piso, String dpto,
+            LocalTime horaInicio, LocalTime horaCierre) {
+        super.setId(proveedorId);
         super.setNombre(nombre);
         super.setApellido(apellido);
+        super.setMail(mail);
+        super.setContraseña(contraseña);
+        super.setTipoPersona(2);
+        this.razonSocial = razonSocial;
+        this.telefono = telefono;
+        this.horaInicio = horaInicio;
+        this.horaCierre = horaCierre;
+        this.ciudad = ciudad;
+        super.setDireccion(new Direccion(calle, numero, cp, piso, dpto));
         this.productos = new ArrayList<>();
         this.opiniones = new ArrayList<>();
     }
-
-    public ProveedorProducto(int aInt, String nombre, String apellido) {
-       super.setNombre(nombre);
-       super.setApellido(apellido);//To change body of generated methods, choose Tools | Templates.
+//-------------sirve para listar.
+    public ProveedorProducto(int proveedorId, String razonSocial, String telefono,
+            String calle, int numero, String cp, String piso, String dpto,
+            LocalTime horaInicio, LocalTime horaCierre) {
+        super.setTipoPersona(2);
+        super.setId(proveedorId);
+        this.razonSocial = razonSocial;
+        this.telefono = telefono;
+        super.setDireccion(new Direccion(calle, numero, cp, piso, dpto));
+        this.horaInicio = horaInicio;
+        this.horaCierre = horaCierre;
+        this.productos = new ArrayList<>();
+        this.opiniones = new ArrayList<>();
     }
     
 /** Obtener la ciudad.
@@ -50,14 +72,14 @@ public class ProveedorProducto extends Persona{
  * @return (String ciudad)
  */
     public String getCiudad() {
-        return Ciudad;
+        return ciudad;
     }
 /** Agregar una ciudad.
  * 
  * @param Ciudad 
  */
     public void setCiudad(String Ciudad) {
-        this.Ciudad = Ciudad;
+        this.ciudad = Ciudad;
     }
 /** Obtener razon social.
  * 
@@ -73,6 +95,21 @@ public class ProveedorProducto extends Persona{
     public void setRazonSocial(String razonSocial) {
         this.razonSocial = razonSocial;
     }
+/** Obtener el telefono.
+ * 
+ * @return 
+ */
+    public String getTelefono() {
+        return telefono;
+    }
+/** Agregar un telefono.
+ * 
+ * @param telefono 
+ */
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
 /**Obtener un horario de inicio.
  * 
  * @return (horario de inicio)

@@ -6,7 +6,7 @@ public class Direccion {
     private int id;
     private String calle;
     private int numero;
-    private int codigoPostal;
+    private String codigoPostal;
     private String piso;
     private String departamento;
 
@@ -23,7 +23,7 @@ public class Direccion {
  * @param piso
  * @param departamento
  */
-    public Direccion(String calle, int numero, int codigoPostal, String piso, String departamento) {
+    public Direccion(String calle, int numero, String codigoPostal, String piso, String departamento) {
         this.calle = calle;
         this.numero = numero;
         this.codigoPostal = codigoPostal;
@@ -69,14 +69,14 @@ public class Direccion {
  * 
  * @return (int codigoPostal)
  */
-    public int getCodigoPostal() {
+    public String getCodigoPostal() {
         return codigoPostal;
     }
 /** Agregar codigo postal a direccion.
  * 
  * @param codigoPostal 
  */
-    public void setCodigoPostal(int codigoPostal) {
+    public void setCodigoPostal(String codigoPostal) {
         this.codigoPostal = codigoPostal;
     }
 /** Obtener el piso de la direccion.
@@ -106,6 +106,11 @@ public class Direccion {
  */
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
+    }
+
+    @Override
+    public String toString() {
+        return codigoPostal + ", " + calle + ", " + numero + ", " + piso + ", " + departamento;
     }
 
     

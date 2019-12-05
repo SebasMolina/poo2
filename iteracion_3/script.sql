@@ -28,6 +28,7 @@ ALTER SEQUENCE public.persona_id_seq OWNED BY public.persona.personaId;
 
 CREATE TABLE public.proveedor (
                 proveedorId INTEGER NOT NULL,
+                telefono VARCHAR NOT NULL,
                 razonSocial VARCHAR NOT NULL,
                 horaInicio TIME NOT NULL,
                 horaCierre TIME NOT NULL,
@@ -54,20 +55,20 @@ ALTER SEQUENCE public.producto_productoid_seq OWNED BY public.producto.productoI
 CREATE SEQUENCE public.ingredientexproducto_ingredientexproductoid_seq;
 
 CREATE TABLE public.ingredientexproducto (
-                ingredientexproductoId INTEGER NOT NULL DEFAULT nextval('public.ingredientexproducto_ingredientexproductoid_seq'),
-                productoId INTEGER NOT NULL,
+                ingredientexproductoid INTEGER NOT NULL DEFAULT nextval('public.ingredientexproducto_ingredientexproductoid_seq'),
                 ingredienteId INTEGER NOT NULL,
-                CONSTRAINT ingredientexproducto_pk PRIMARY KEY (ingredientexproductoId)
+                productoId INTEGER NOT NULL,
+                CONSTRAINT ingredientexproducto_pk PRIMARY KEY (ingredientexproductoid)
 );
 
 
-ALTER SEQUENCE public.ingredientexproducto_ingredientexproductoid_seq OWNED BY public.ingredientexproducto.ingredientexproductoId;
+ALTER SEQUENCE public.ingredientexproducto_ingredientexproductoid_seq OWNED BY public.ingredientexproducto.ingredientexproductoid;
 
 CREATE TABLE public.direccion (
                 personaId INTEGER NOT NULL,
                 calle VARCHAR NOT NULL,
                 numero VARCHAR,
-                cp INTEGER NOT NULL,
+                cp VARCHAR NOT NULL,
                 piso VARCHAR,
                 dpto VARCHAR,
                 CONSTRAINT direccion_pk PRIMARY KEY (personaId)
@@ -148,7 +149,7 @@ NOT DEFERRABLE;
 ALTER TABLE public.usuario ADD CONSTRAINT persona_usuario_fk
 FOREIGN KEY (usuarioId)
 REFERENCES public.persona (personaId)
-ON DELETE NO ACTION
+ON DELETE CASCADE
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
@@ -162,7 +163,7 @@ NOT DEFERRABLE;
 ALTER TABLE public.proveedor ADD CONSTRAINT persona_proveedor_fk
 FOREIGN KEY (proveedorId)
 REFERENCES public.persona (personaId)
-ON DELETE NO ACTION
+ON DELETE CASCADE
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
@@ -187,14 +188,14 @@ ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
-ALTER TABLE public.ingredientexproducto ADD CONSTRAINT producto_ingredientexproducto_fk
+ALTER TABLE public.productoxpedido ADD CONSTRAINT producto_productoxpedido_fk
 FOREIGN KEY (productoId)
 REFERENCES public.producto (productoId)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
-ALTER TABLE public.productoxpedido ADD CONSTRAINT producto_productoxpedido_fk
+ALTER TABLE public.ingredientexproducto ADD CONSTRAINT producto_ingredientexproducto_fk
 FOREIGN KEY (productoId)
 REFERENCES public.producto (productoId)
 ON DELETE NO ACTION

@@ -29,12 +29,12 @@ public class Servidor {
 
     public static void main(String[] args) throws SQLException {
         
-        var url = "jdbc:postgresql://localhost:5432/nyamdelivery";
+        var url = "jdbc:postgresql://localhost:5432/nyandelivery";
     //CAMBIAR POR CADA BASE DE DATOS.
         Properties props = new Properties();
         props.setProperty("user","postgres");
     //CAMBIAR POR CADA USUARIO DE LA BD.
-        props.setProperty("password","ax37704997");
+        props.setProperty("password","sebas");
     //CAMBIAR POR CADA CONTRASEÑA DE LA BASE DE DATOS
         var conexion = DriverManager.getConnection(url,props);
         var RepositorioUsuario = new RepositorioUsuario(conexion);
@@ -58,26 +58,29 @@ public class Servidor {
         })
         
         .routes(() -> {
-            path("usuario", () -> {
+            path("api/v1.0/usuario", () -> {
                 get(UsuarioControlador::listar);
                 post(UsuarioControlador::crear);
                 path(":identificador", () -> {
+                    get(UsuarioControlador::obtener);
                     delete(UsuarioControlador::borrar);
                     put(UsuarioControlador::modificar);
                 });
             });
-            path("proveedor", () -> {
+            path("api/v1.0/proveedor", () -> {
                 get(ProveedorControlador::listar);
                 post(ProveedorControlador::crear);
                 path(":identificador", () -> {
+                    get(ProveedorControlador::obtener);
                     delete(ProveedorControlador::borrar);
                     put(ProveedorControlador::modificar);
                 });
             });
-            path("ingrediente", () -> {
+            path("api/v1.0/ingrediente", () -> {
                 get(IngredienteControlador::listar);
                 post(IngredienteControlador::crear);
                 path(":identificador", () -> {
+                    get(IngredienteControlador::obtener);
                     delete(IngredienteControlador::borrar);
                     put(IngredienteControlador::modificar);
                 });

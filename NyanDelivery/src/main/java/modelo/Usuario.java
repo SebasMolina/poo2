@@ -1,9 +1,5 @@
 
 package modelo;
-
-import java.util.ArrayList;
-import modelo.Direccion;
-import modelo.Persona;
 /** Clase para el usuario que va a pedir productos.
  * 
  * 
@@ -18,16 +14,23 @@ public class Usuario extends Persona{
     public Usuario() {
         super.setTipoPersona(1);    //Sirve para diferenciar.  
     }
-/** * Contructor.Parametros:
- * @param mail
- * @param contraseña
+/** Contructor que se usa para listar.
+ * @param id
  * @param nombre
  * @param apellido
+ * @param mail
+ * @param contraseña
  * @param nombreUsuario
  * @param telefono
- * @param direccion
- */
-    public Usuario(String mail, String contraseña, String nombre, String apellido, String nombreUsuario, String telefono, Direccion direccion) {
+ * @param calle
+ * @param dpto
+ * @param cp
+ * @param numero
+ * @param piso
+ */ 
+    public Usuario(int id, String nombre, String apellido, String mail, String contraseña, 
+            String nombreUsuario, String telefono,
+            String calle, int numero, String cp, String piso, String dpto) {
         super.setTipoPersona(1);
         super.setMail(mail);
         super.setContraseña(contraseña);
@@ -35,19 +38,32 @@ public class Usuario extends Persona{
         super.setApellido(apellido);
         this.telefono = telefono;
         this.nombreUsuario = nombreUsuario;
-        super.setDireccion(direccion);
+        this.setDireccion(new Direccion(calle, numero, cp, piso, dpto));
     }
-
-   public Usuario(int aInt, String nombre, String apellido) {
+//el de arriba se usa para crear y obtener
+/** Contructor que se usa para listar.
+ * @param id
+ * @param nombre
+ * @param apellido
+ * @param nombreUsuario
+ * @param telefono
+ * @param calle
+ * @param dpto
+ * @param cp
+ * @param numero
+ * @param piso
+ */ 
+    public Usuario(int id, String nombre, String apellido, String nombreUsuario, String telefono,
+            String calle, int numero, String cp, String piso, String dpto) {
+        super.setTipoPersona(1);
+        super.setId(id);
         super.setNombre(nombre);
         super.setApellido(apellido);
-   }
-/** agregar una direccion.
- * @param direccion 
- * agrega una direccion al usuario.
- */
-
-
+        this.telefono = telefono;
+        this.nombreUsuario = nombreUsuario;
+        this.setDireccion(new Direccion(calle, numero, cp, piso, dpto));
+    }
+//******************************************************************************
 /** Obtener el nombre de usuario.
  * 
  * @return (String nombreUsuario)

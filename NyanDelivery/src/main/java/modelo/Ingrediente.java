@@ -20,15 +20,18 @@ public class Ingrediente {
  * @param nombre 
  * @param cantidad
  */
-    public Ingrediente(String nombre, int cantidad) {
+    public Ingrediente(int id, String nombre, int cantidad) {
+        this.id = id;
         this.nombre = nombre;
         this.cantidad = cantidad;
     }
-
-    public Ingrediente(int aInt, String string, String string0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+/** Agregar un id.
+ * 
+ * @param id 
+ */
+    public void setId(int id) {
+        this.id = id;
     }
-
 /** Obtener el id.
  * 
  * @return 
